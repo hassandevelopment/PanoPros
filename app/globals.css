@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ink: #0E0E10;
+  --color-charcoal: #2A2A2E;
+  --color-bone: #F7F5F0;
+  --color-cream: #EFEAE0;
+  --color-brand: #1F3A5F;
+  --color-brand-hover: #16294A;
+  --color-muted: #8A8A8E;
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* ── Hero buttons ── */
+.hero-btn {
+  transition: background-color 150ms ease-out, transform 100ms ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn:hover { background-color: var(--color-bone); }
+}
+.hero-btn:active { transform: scale(0.97); }
+
+/* ── Service card stagger ── */
+.service-grid .service-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 400ms var(--ease-out-expo) forwards;
+}
+.service-grid .service-card:nth-child(1) { animation-delay: 0ms; }
+.service-grid .service-card:nth-child(2) { animation-delay: 60ms; }
+.service-grid .service-card:nth-child(3) { animation-delay: 120ms; }
+.service-grid .service-card:nth-child(4) { animation-delay: 180ms; }
+.service-grid .service-card:nth-child(5) { animation-delay: 240ms; }
+.service-grid .service-card:nth-child(6) { animation-delay: 300ms; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Portfolio grid stagger ── */
+.portfolio-grid .portfolio-item {
+  opacity: 0;
+  animation: fadeIn 350ms ease-out forwards;
+}
+.portfolio-grid .portfolio-item:nth-child(1)  { animation-delay: 0ms; }
+.portfolio-grid .portfolio-item:nth-child(2)  { animation-delay: 40ms; }
+.portfolio-grid .portfolio-item:nth-child(3)  { animation-delay: 80ms; }
+.portfolio-grid .portfolio-item:nth-child(4)  { animation-delay: 120ms; }
+.portfolio-grid .portfolio-item:nth-child(5)  { animation-delay: 160ms; }
+.portfolio-grid .portfolio-item:nth-child(6)  { animation-delay: 200ms; }
+.portfolio-grid .portfolio-item:nth-child(n+7) { animation-delay: 240ms; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ── prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .service-grid .service-card,
+  .portfolio-grid .portfolio-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
