@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 
 const navLinks = [
+  { label: "Services", href: "/#services" },
   { label: "Packages", href: "/packages" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },

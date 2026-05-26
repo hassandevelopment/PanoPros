@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with PanoPros for real estate photography, video, and virtual tours in Bahrain. Quick turnaround, professional results.",
+    "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
 };
 
 export default function ContactPage() {
@@ -23,8 +23,8 @@ export default function ContactPage() {
             Ready to Stand Out?
           </h1>
           <p className="mt-4 text-charcoal max-w-lg mx-auto leading-relaxed">
-            Tell us about your listing and we&apos;ll get back to you within one
-            business day.
+            Whether it&apos;s a property shoot or a new website — tell us what
+            you need and we&apos;ll get back to you within one business day.
           </p>
         </div>
 

@@ -17,12 +17,25 @@ const headerStyles: Record<string, { bg: string; pattern: string }> = {
     bg: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 40%, #111 100%)",
     pattern: "radial-gradient(circle at 15% 85%, rgba(255,255,255,0.07) 0%, transparent 45%), radial-gradient(circle at 85% 15%, rgba(255,255,255,0.05) 0%, transparent 45%), radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%)",
   },
+  Starter: {
+    bg: "linear-gradient(135deg, #1c1c1e 0%, #2a2a2e 100%)",
+    pattern: "radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%)",
+  },
+  Business: {
+    bg: "linear-gradient(135deg, #0E0E10 0%, #222224 50%, #1a1a1a 100%)",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(255,255,255,0.06) 0%, transparent 50%), radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 60%)",
+  },
+  Premium: {
+    bg: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 40%, #0E0E10 100%)",
+    pattern: "radial-gradient(circle at 15% 85%, rgba(255,255,255,0.07) 0%, transparent 45%), radial-gradient(circle at 85% 15%, rgba(255,255,255,0.05) 0%, transparent 45%)",
+  },
 };
 
 export default function PackageCard({
   name,
   tagline,
   price,
+  priceNote,
   features,
   addOns,
   cta,
@@ -62,7 +75,12 @@ export default function PackageCard({
           </p>
           <div className="flex items-baseline justify-between">
             <h3 className="text-white text-2xl font-bold tracking-tight">{name}</h3>
-            <span className="text-white text-3xl font-bold">{price}</span>
+            <div className="text-right">
+              <span className="text-white text-3xl font-bold">{price}</span>
+              {priceNote && (
+                <p className="text-white/40 text-[10px] font-semibold tracking-[0.2em] uppercase mt-0.5">{priceNote}</p>
+              )}
+            </div>
           </div>
         </div>
       </div>

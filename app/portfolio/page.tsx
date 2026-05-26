@@ -4,7 +4,7 @@ import PortfolioGallery from "@/components/PortfolioGallery";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "See examples of our real estate photography, virtual staging, and interior work across Bahrain.",
+    "Photography, virtual staging, floor plans, and custom websites built for businesses across Bahrain.",
 };
 
 export default function PortfolioPage() {
@@ -19,8 +19,8 @@ export default function PortfolioPage() {
             Portfolio
           </h1>
           <p className="mt-4 text-charcoal max-w-lg mx-auto">
-            A selection of photography, virtual staging, and floor plan work
-            from across Bahrain.
+            Photography, virtual staging, floor plans — and the websites
+            we&apos;ve built for businesses across Bahrain.
           </p>
         </div>
 

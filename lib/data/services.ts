@@ -6,6 +6,33 @@ export interface Service {
   link?: { label: string; href: string };
 }
 
+export const devServices: Service[] = [
+  {
+    title: "Business Websites",
+    image: "/images/portfolio/16.webp", // TODO: replace with dev service image
+    objectPosition: "center",
+    body: "**A website that works as hard as you do.** Custom-built, mobile-first, and designed to convert visitors into customers — not just to look good.",
+  },
+  {
+    title: "Landing Pages",
+    image: "/images/portfolio/hdr-1.webp", // TODO: replace with dev service image
+    objectPosition: "center",
+    body: "Single-page sites built for speed and clarity. Perfect for new businesses, campaigns, or services that need a professional online presence fast.",
+  },
+  {
+    title: "Brand Identity & Design",
+    image: "/images/portfolio/hdr-2.webp", // TODO: replace with dev service image
+    objectPosition: "center",
+    body: "Logo, colour palette, typography, and the visual language your business needs to look credible and consistent from day one.",
+  },
+  {
+    title: "SEO & Performance",
+    image: "/images/portfolio/hdr-3.webp", // TODO: replace with dev service image
+    objectPosition: "center",
+    body: "Fast load times, clean code, and Google-ready structure baked in from the start — not bolted on after the fact.",
+  },
+];
+
 export const services: Service[] = [
   {
     title: "Photography",

@@ -3,12 +3,21 @@ export type PortfolioCategory =
   | "Photography"
   | "Virtual Staging"
   | "Floor Plans"
-  | "Kitchens & Interiors";
+  | "Kitchens & Interiors"
+  | "Development";
 
 export interface PortfolioImage {
   src: string;
   alt: string;
-  category: Exclude<PortfolioCategory, "All">;
+  category: Exclude<PortfolioCategory, "All" | "Development">;
+}
+
+export interface DevProject {
+  title: string;
+  client: string;
+  description: string;
+  href: string;
+  category: "Development";
 }
 
 export const portfolioCategories: PortfolioCategory[] = [
@@ -17,6 +26,66 @@ export const portfolioCategories: PortfolioCategory[] = [
   "Virtual Staging",
   "Floor Plans",
   "Kitchens & Interiors",
+  "Development",
+];
+
+export const devProjects: DevProject[] = [
+  {
+    title: "PAD",
+    client: "Architecture & Interior Design · Bahrain",
+    description: "A refined portfolio site for an architecture and interior design studio — built to showcase projects and attract discerning clients.",
+    href: "https://hassandevelopment.github.io/PAD/index.html",
+    category: "Development",
+  },
+  {
+    title: "PanoPros",
+    client: "Real Estate Media · Bahrain",
+    description: "Professional photography, videography, virtual tours, floor plans, and virtual staging for Bahrain's property market.",
+    href: "https://www.panopros.bh",
+    category: "Development",
+  },
+  {
+    title: "Mélo Beauty Lounge",
+    client: "Hair, Nails & Café · Barbar, Bahrain",
+    description: "Full-service salon with an in-house café — hair colour, treatments, manicures, and pedicures in Barbar, Bahrain.",
+    href: "https://hassandevelopment.github.io/Melo-Beauty-Lounge/",
+    category: "Development",
+  },
+  {
+    title: "Calma",
+    client: "Wellness & Beauty · Bahrain",
+    description: "A serene, conversion-focused site for a premium wellness brand — designed to attract and book clients effortlessly.",
+    href: "https://hassandevelopment.github.io/Calma/",
+    category: "Development",
+  },
+  {
+    title: "Gusto Pizzeria Ristorante",
+    client: "Italian Restaurant · Bahrain",
+    description: "Authentic wood-fired Italian dining — a full-service restaurant site built to drive reservations.",
+    href: "https://hassandevelopment.github.io/Gusto-Menu/",
+    category: "Development",
+  },
+  {
+    title: "CAS Premium",
+    client: "Premium Car Care · Bahrain",
+    description: "High-end auto detailing, ceramic coatings, and PPF — a premium site built to attract serious car enthusiasts.",
+    href: "https://hassandevelopment.github.io/CAS-Premium/",
+    category: "Development",
+  },
+  {
+    title: "Custom Touch Car Care",
+    client: "Auto Detailing · Salmabad, Bahrain",
+    description: "Workshop-grade detailing — ceramic coatings, PPF, wrapping, and paint correction built for Gulf conditions.",
+    href: "https://hassandevelopment.github.io/Custom-Touch-Car-Care/",
+    category: "Development",
+  },
+  {
+    title: "3D Car Spa",
+    client: "Car Detailing · Hidd, Bahrain",
+    description: "Premium mobile car detailing with a spa-quality finish — comes to you anywhere in Bahrain.",
+    href: "https://hassandevelopment.github.io/3D-Car-Spa/",
+    category: "Development",
+  },
 ];
 
 export const portfolioImages: PortfolioImage[] = [

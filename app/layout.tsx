@@ -18,11 +18,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "PanoPros — Real Estate Photography & Media in Bahrain",
+    default: "PanoPros — Media & Web Development in Bahrain",
     template: "%s | PanoPros",
   },
   description:
-    "Real estate photography, video, virtual tours, and floor plans in Bahrain. PanoPros helps realtors sell faster with media that attracts serious buyers.",
+    "Real estate photography, video, virtual tours, floor plans, and custom web development in Bahrain. PanoPros helps businesses look and perform their best online.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.panopros.bh"
   ),
@@ -52,10 +52,10 @@ const jsonLd = {
   },
   areaServed: "Bahrain",
   description:
-    "Professional real estate photography, video, virtual tours, and floor plans in Bahrain.",
+    "Real estate photography, video, virtual tours, floor plans, and custom web development for businesses in Bahrain.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Real Estate Media Services",
+    name: "Media & Development Services",
     itemListElement: [
       "Photography",
       "Cinematic Video",
@@ -65,6 +65,11 @@ const jsonLd = {
       "2D Floor Plans",
       "3D Floor Plans",
       "Twilight Photography",
+      "Business Website Design",
+      "Landing Page Development",
+      "Bilingual Website (English + Arabic)",
+      "SEO & Performance Optimisation",
+      "Website Care Plan",
     ].map((name) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name },

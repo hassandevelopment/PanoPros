@@ -18,13 +18,15 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const packageOptions = [
-  "Basic (75 BD)",
-  "Standard (120 BD)",
-  "Premium Luxury (220 BD)",
-  "Not sure",
-  "Other",
-];
+const packageOptionMap: Record<string, string> = {
+  basic:          "Media: Basic (75 BD)",
+  standard:       "Media: Standard (120 BD)",
+  premium:        "Media: Premium Luxury (220 BD)",
+  "dev-starter":  "Dev: Starter (250 BD)",
+  "dev-business": "Dev: Business (400 BD)",
+  "dev-premium":  "Dev: Premium (650 BD)",
+  "care-plan":    "Dev: Care Plan (30 BD/mo)",
+};
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
@@ -39,12 +41,9 @@ export default function ContactForm() {
 
   useEffect(() => {
     const pkg = searchParams.get("package");
-    if (pkg) {
-      const match = packageOptions.find((o) =>
-        o.toLowerCase().startsWith(pkg.toLowerCase())
-      );
-      if (match) setValue("package", match);
-    }
+    if (!pkg) return;
+    const match = packageOptionMap[pkg.toLowerCase()];
+    if (match) setValue("package", match);
   }, [searchParams, setValue]);
 
   const onSubmit = async (data: FormData) => {
@@ -125,14 +124,24 @@ export default function ContactForm() {
         </Field>
       </div>
 
-      <Field label="Package Interest" error={undefined}>
+      <Field label="Service Interest" error={undefined}>
         <select {...register("package")} className={inputCls(false)}>
-          <option value="">Select a package…</option>
-          {packageOptions.map((o) => (
-            <option key={o} value={o}>
-              {o}
-            </option>
-          ))}
+          <option value="">Select a service…</option>
+          <optgroup label="Real Estate Media">
+            <option value="Media: Basic (75 BD)">Basic — 75 BD</option>
+            <option value="Media: Standard (120 BD)">Standard — 120 BD</option>
+            <option value="Media: Premium Luxury (220 BD)">Premium Luxury — 220 BD</option>
+          </optgroup>
+          <optgroup label="Web & App Development">
+            <option value="Dev: Starter (250 BD)">Starter — 250 BD</option>
+            <option value="Dev: Business (400 BD)">Business — 400 BD</option>
+            <option value="Dev: Premium (650 BD)">Premium — 650 BD</option>
+            <option value="Dev: Care Plan (30 BD/mo)">Care Plan — 30 BD/mo</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="Not sure">Not sure — help me decide</option>
+            <option value="Other">Other</option>
+          </optgroup>
         </select>
       </Field>
 
@@ -140,7 +149,7 @@ export default function ContactForm() {
         <textarea
           {...register("message")}
           rows={5}
-          placeholder="Tell us about your property and what you need…"
+          placeholder="Tell us about your property, your business, or what you need…"
           className={`${inputCls(!!errors.message)} resize-none`}
         />
       </Field>
