@@ -1,12 +1,26 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { parseInlineBold } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 
-export default function ServiceCard({ title, image, objectPosition = "center", body, link }: Service) {
+export default function ServiceCard({ title, image, images, objectPosition = "center", body, link }: Service) {
   const parts = parseInlineBold(body);
   const isGif = image.endsWith(".gif");
+  const hasSlideshow = images && images.length > 1;
+
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    if (!hasSlideshow) return;
+    const timer = setInterval(() => {
+      setSlideIndex(i => (i + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [hasSlideshow, images]);
+
+  const currentSrc = hasSlideshow ? images[slideIndex] : image;
 
   return (
     <article
@@ -23,24 +37,60 @@ export default function ServiceCard({ title, image, objectPosition = "center", b
       }}
     >
       <div className="relative aspect-[4/3] overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover"
-          style={{
-            objectPosition,
-            transition: isGif ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
-          }}
-          onMouseEnter={e => {
-            if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
-          }}
-          onMouseLeave={e => {
-            if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
-          }}
-          unoptimized={isGif}
-        />
+        {hasSlideshow ? (
+          <>
+            {images.map((src, i) => (
+              <Image
+                key={src}
+                src={src}
+                alt={`${title} — slide ${i + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover"
+                style={{
+                  objectPosition,
+                  position: "absolute",
+                  opacity: i === slideIndex ? 1 : 0,
+                  transition: "opacity 800ms ease-in-out",
+                }}
+              />
+            ))}
+            {/* Dot indicators */}
+            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSlideIndex(i)}
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{
+                    backgroundColor: i === slideIndex ? "rgba(247,245,240,0.95)" : "rgba(247,245,240,0.45)",
+                    transition: "background-color 300ms ease-out",
+                  }}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <Image
+            src={currentSrc}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+            style={{
+              objectPosition,
+              transition: isGif ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
+            }}
+            onMouseEnter={e => {
+              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
+            }}
+            onMouseLeave={e => {
+              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+            }}
+            unoptimized={isGif}
+          />
+        )}
       </div>
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-semibold text-ink mb-3">{title}</h3>
