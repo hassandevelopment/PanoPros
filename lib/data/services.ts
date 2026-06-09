@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: "Photography",
     image: "/images/portfolio/1.1.webp",
     objectPosition: "center",
-    body: "Stop losing clients to poor visuals.",
+    body: "Professional photos that make your listing stand out and attract serious buyers.",
   },
   {
     title: "Matterport Virtual Tours",
