@@ -17,14 +17,6 @@ export const devServices: Service[] = [
     body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
   },
   {
-    title: "Mobile Applications",
-    image: "/images/services/mobile-apps.png",
-    objectPosition: "center",
-    objectFit: "contain",
-    imageBackground: "#E8E4DC",
-    body: "Custom iOS and Android apps built for your business workflow.",
-  },
-  {
     title: "Landing Pages",
     image: "/images/services/dev-websites-1.jpg",
     images: [
@@ -42,16 +34,24 @@ export const devServices: Service[] = [
     body: "Logo, colours, and typography that make your business look credible from day one.",
   },
   {
-    title: "SEO & Performance",
-    image: "/images/services/seo-performance.svg",
+    title: "Mobile Applications",
+    image: "/images/services/mobile-apps.png",
     objectPosition: "center",
-    body: "Fast load times and Google-ready structure baked in from the start.",
+    objectFit: "contain",
+    imageBackground: "#E8E4DC",
+    body: "Custom iOS and Android apps built for your business workflow.",
   },
   {
     title: "Payment Integrations",
     image: "/images/services/payment-integrations.svg",
     objectPosition: "center",
     body: "Add credit, debit, and Benefit Pay to your website or app seamlessly.",
+  },
+  {
+    title: "SEO & Performance",
+    image: "/images/services/seo-performance.svg",
+    objectPosition: "center",
+    body: "Fast load times and Google-ready structure baked in from the start.",
   },
 ];
 
