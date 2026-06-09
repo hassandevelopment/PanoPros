@@ -35,6 +35,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 const jsonLd = {
@@ -94,7 +101,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-bone text-ink antialiased">
+      <body
+        className="min-h-screen flex flex-col bg-bone text-ink antialiased"
+        suppressHydrationWarning
+      >
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
