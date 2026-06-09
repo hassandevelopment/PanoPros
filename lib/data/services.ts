@@ -4,6 +4,7 @@ export interface Service {
   images?: string[];
   objectPosition?: string;
   objectFit?: "cover" | "contain";
+  imageBackground?: string;
   body: string;
   link?: { label: string; href: string };
 }
@@ -20,6 +21,7 @@ export const devServices: Service[] = [
     image: "/images/services/mobile-apps.png",
     objectPosition: "center",
     objectFit: "contain",
+    imageBackground: "#E8E4DC",
     body: "Custom iOS and Android apps built for your business workflow.",
   },
   {
