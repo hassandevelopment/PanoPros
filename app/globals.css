@@ -137,17 +137,37 @@ body {
   75%       { background-position: -32px 64px; }
 }
 
-/* ── Photo strip marquee ── */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+/* ── Home page entrance choreography ── */
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
-.photo-strip-track {
-  animation: marquee 30s linear infinite;
+@keyframes word-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-line {
+  transform-origin: center;
+  animation: line-draw 600ms ease-out both;
+}
+
+.home-word-1 {
+  animation: word-enter 500ms ease-out 500ms both;
+}
+
+.home-word-2 {
+  animation: word-enter 500ms ease-out 650ms both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .grain::after { animation: none; }
-  .photo-strip-track { animation: none; }
+  .home-line,
+  .home-word-1,
+  .home-word-2 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
