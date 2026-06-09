@@ -90,6 +90,8 @@ export default function ContactForm() {
         <input
           {...register("phone")}
           type="tel"
+          inputMode="tel"
+          autoComplete="tel"
           placeholder="+973 XXXX XXXX"
           className={inputCls(false)}
         />
