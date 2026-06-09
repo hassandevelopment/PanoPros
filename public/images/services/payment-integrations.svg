@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- background -->
+  <rect width="800" height="600" fill="#F0F0F0"/>
+
+  <!-- soft shadow -->
+  <rect x="294" y="120" width="220" height="372" rx="34" fill="#1a1a1a" opacity="0.06"/>
+
+  <!-- phone body -->
+  <rect x="288" y="114" width="224" height="372" rx="34" fill="white" stroke="#1a1a1a" stroke-width="9"/>
+
+  <!-- screen area -->
+  <rect x="303" y="152" width="194" height="288" rx="4" fill="#1a1a1a" opacity="0.04"/>
+
+  <!-- top speaker pill -->
+  <rect x="368" y="134" width="64" height="8" rx="4" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- volume buttons -->
+  <rect x="280" y="198" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+  <rect x="280" y="244" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- power button -->
+  <rect x="513" y="218" width="7" height="46" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- home indicator bar -->
+  <rect x="365" y="462" width="70" height="5" rx="2.5" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- Back card (tilted behind) -->
+  <rect x="334" y="252" width="148" height="94" rx="10" fill="#1a1a1a" opacity="0.22" transform="rotate(-7 408 299)"/>
+
+  <!-- Front card -->
+  <rect x="318" y="266" width="164" height="102" rx="11" fill="#1a1a1a" opacity="0.84"/>
+
+  <!-- Chip -->
+  <rect x="334" y="283" width="24" height="19" rx="4" fill="#D4A843"/>
+  <line x1="334" y1="292" x2="358" y2="292" stroke="#B8892E" stroke-width="1.2"/>
+  <line x1="346" y1="283" x2="346" y2="302" stroke="#B8892E" stroke-width="1.2"/>
+
+  <!-- Card number dots — 4 groups of 4 -->
+  <g fill="white" opacity="0.65">
+    <circle cx="334" cy="322" r="2.8"/>
+    <circle cx="341" cy="322" r="2.8"/>
+    <circle cx="348" cy="322" r="2.8"/>
+    <circle cx="355" cy="322" r="2.8"/>
+
+    <circle cx="368" cy="322" r="2.8"/>
+    <circle cx="375" cy="322" r="2.8"/>
+    <circle cx="382" cy="322" r="2.8"/>
+    <circle cx="389" cy="322" r="2.8"/>
+
+    <circle cx="402" cy="322" r="2.8"/>
+    <circle cx="409" cy="322" r="2.8"/>
+    <circle cx="416" cy="322" r="2.8"/>
+    <circle cx="423" cy="322" r="2.8"/>
+
+    <circle cx="436" cy="322" r="2.8"/>
+    <circle cx="443" cy="322" r="2.8"/>
+    <circle cx="450" cy="322" r="2.8"/>
+    <circle cx="457" cy="322" r="2.8"/>
+  </g>
+
+  <!-- Card brand — two overlapping circles (Mastercard style) -->
+  <circle cx="449" cy="287" r="15" fill="#E04040" opacity="0.82"/>
+  <circle cx="462" cy="287" r="15" fill="#F4A030" opacity="0.82"/>
+
+  <!-- Cardholder name line -->
+  <rect x="334" y="340" width="72" height="6" rx="3" fill="white" opacity="0.3"/>
+
+  <!-- Expiry line -->
+  <rect x="334" y="353" width="38" height="5" rx="2.5" fill="white" opacity="0.22"/>
+</svg>

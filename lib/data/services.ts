@@ -43,6 +43,12 @@ export const devServices: Service[] = [
     objectPosition: "center",
     body: "Fast load times and Google-ready structure baked in from the start.",
   },
+  {
+    title: "Payment Integrations",
+    image: "/images/services/payment-integrations.svg",
+    objectPosition: "center",
+    body: "Add credit, debit, and Benefit Pay to your website or app seamlessly.",
+  },
 ];
 
 export const services: Service[] = [
