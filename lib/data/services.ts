@@ -39,7 +39,7 @@ export const devServices: Service[] = [
   },
   {
     title: "SEO & Performance",
-    image: "/images/portfolio/exterior-1.webp",
+    image: "/images/services/seo-performance.svg",
     objectPosition: "center",
     body: "Fast load times and Google-ready structure baked in from the start.",
   },

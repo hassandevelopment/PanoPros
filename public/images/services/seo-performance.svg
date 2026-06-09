@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- background -->
+  <rect width="800" height="600" fill="#F0F0F0"/>
+
+  <!-- soft shadow -->
+  <rect x="294" y="120" width="220" height="372" rx="34" fill="#1a1a1a" opacity="0.06"/>
+
+  <!-- phone body -->
+  <rect x="288" y="114" width="224" height="372" rx="34" fill="white" stroke="#1a1a1a" stroke-width="9"/>
+
+  <!-- screen area -->
+  <rect x="303" y="152" width="194" height="288" rx="4" fill="#1a1a1a" opacity="0.04"/>
+
+  <!-- top speaker pill -->
+  <rect x="368" y="134" width="64" height="8" rx="4" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- volume buttons -->
+  <rect x="280" y="198" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+  <rect x="280" y="244" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- power button -->
+  <rect x="513" y="218" width="7" height="46" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- home indicator bar -->
+  <rect x="365" y="462" width="70" height="5" rx="2.5" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- Gear: outer filled circle -->
+  <circle cx="400" cy="300" r="48" fill="#1a1a1a" opacity="0.82"/>
+
+  <!-- Gear: 8 teeth (rectangles extending outward, rotated around center) -->
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(0 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(45 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(90 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(135 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(180 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(225 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(270 400 300)"/>
+  <rect x="391" y="236" width="18" height="16" rx="3" fill="#1a1a1a" opacity="0.82" transform="rotate(315 400 300)"/>
+
+  <!-- Gear: hub hole -->
+  <circle cx="400" cy="300" r="20" fill="white"/>
+
+  <!-- Lightning bolt inside hub (speed) -->
+  <path d="M403 284 L396 301 L401 301 L397 316 L408 296 L402 296 Z"
+        fill="#1a1a1a" opacity="0.75"/>
+</svg>
