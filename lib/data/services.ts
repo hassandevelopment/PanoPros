@@ -3,6 +3,8 @@ export interface Service {
   image: string;
   images?: string[];
   objectPosition?: string;
+  objectFit?: "cover" | "contain";
+  imageBackground?: string;
   body: string;
   link?: { label: string; href: string };
 }
@@ -10,6 +12,12 @@ export interface Service {
 export const devServices: Service[] = [
   {
     title: "Business Websites",
+    image: "/images/services/dev-landing.png",
+    objectPosition: "center",
+    body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
+  },
+  {
+    title: "Landing Pages",
     image: "/images/services/dev-websites-1.jpg",
     images: [
       "/images/services/dev-websites-1.jpg",
@@ -17,25 +25,33 @@ export const devServices: Service[] = [
       "/images/services/dev-websites-3.jpg",
     ],
     objectPosition: "center",
-    body: "**A website that works as hard as you do.** Custom-built, mobile-first, and designed to convert visitors into customers — not just to look good.",
-  },
-  {
-    title: "Landing Pages",
-    image: "/images/services/dev-landing.png",
-    objectPosition: "center",
-    body: "Single-page sites built for speed and clarity. Perfect for new businesses, campaigns, or services that need a professional online presence fast.",
+    body: "Single-page sites built for speed, clarity, and a professional first impression.",
   },
   {
     title: "Brand Identity & Design",
     image: "/images/services/dev-branding.png",
     objectPosition: "center",
-    body: "Logo, colour palette, typography, and the visual language your business needs to look credible and consistent from day one.",
+    body: "Logo, colours, and typography that make your business look credible from day one.",
+  },
+  {
+    title: "Mobile Applications",
+    image: "/images/services/mobile-apps.png",
+    objectPosition: "center",
+    objectFit: "contain",
+    imageBackground: "#E8E4DC",
+    body: "Custom iOS and Android apps built for your business workflow.",
+  },
+  {
+    title: "Payment Integrations",
+    image: "/images/services/payment-integrations.svg",
+    objectPosition: "center",
+    body: "Add credit, debit, and Benefit Pay to your website or app seamlessly.",
   },
   {
     title: "SEO & Performance",
-    image: "/images/portfolio/exterior-1.webp",
+    image: "/images/services/seo-performance.svg",
     objectPosition: "center",
-    body: "Fast load times, clean code, and Google-ready structure baked in from the start — not bolted on after the fact.",
+    body: "Fast load times and Google-ready structure baked in from the start.",
   },
 ];
 
@@ -44,13 +60,13 @@ export const services: Service[] = [
     title: "Photography",
     image: "/images/portfolio/1.1.webp",
     objectPosition: "center",
-    body: "**Stop losing buyers to poor visuals.** Many local listings have low lighting, clutter, and reflections. Our professional photos make your property stand out, so buyers choose you over the rest.",
+    body: "Professional photos that make your listing stand out and attract serious buyers.",
   },
   {
     title: "Matterport Virtual Tours",
     image: "/images/services/virtual-tour.gif",
     objectPosition: "center",
-    body: "**Virtual tours let buyers walk through your property online, from anywhere, at any time.** They explore more, understand the home better, and save you the time of unnecessary open houses.",
+    body: "Let buyers walk through your property online, from anywhere, at any time.",
     link: {
       label: "Click here to see an example",
       href: "https://my.matterport.com/show/?m=YGXvNG1vJyB",
@@ -60,24 +76,24 @@ export const services: Service[] = [
     title: "Virtual Staging",
     image: "/images/services/virtual-staging.gif",
     objectPosition: "center",
-    body: "**Empty rooms don't sell.** We stage spaces digitally so they feel lived-in and inviting, helping buyers connect with the property and decide faster.",
+    body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
   },
   {
     title: "Twilight Shoot",
     image: "/images/services/twilight.png",
     objectPosition: "center",
-    body: "Evening photos show your property at its best, attract more buyers, and help them decide faster.",
+    body: "Evening light makes your property look its best and stops the scroll.",
   },
   {
     title: "3D Floor Plans",
     image: "/images/services/3d-floor-plan.png",
     objectPosition: "top",
-    body: "3D floor plans show buyers the layout clearly, helping them understand the space and imagine living there.",
+    body: "Give buyers an immersive, three-dimensional view of your property layout.",
   },
   {
     title: "2D Floor Plans",
     image: "/images/services/2d-floor-plan.png",
     objectPosition: "top",
-    body: "2D floor plans give buyers a clear view of the property layout, so they can see how rooms connect and get a better sense of the space.",
+    body: "A clean, accurate floor plan so buyers instantly understand the space.",
   },
 ];

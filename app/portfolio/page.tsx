@@ -7,24 +7,27 @@ export const metadata: Metadata = {
     "Photography, virtual staging, floor plans, and custom websites built for businesses across Bahrain.",
 };
 
-export default function PortfolioPage() {
+export default function PortfolioPage({
+  searchParams,
+}: {
+  searchParams?: { filter?: string };
+}) {
+  const initialFilter = searchParams?.filter ?? undefined;
+
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
+    <section className="grain pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
-            Our Work
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-ink">
+          <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
+          <h1
+            className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
             Portfolio
           </h1>
-          <p className="mt-4 text-charcoal max-w-lg mx-auto">
-            Photography, virtual staging, floor plans — and the websites
-            we&apos;ve built for businesses across Bahrain.
-          </p>
         </div>
 
-        <PortfolioGallery />
+        <PortfolioGallery initialFilter={initialFilter} />
       </div>
     </section>
   );

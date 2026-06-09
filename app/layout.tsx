@@ -17,32 +17,57 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://panopros.bh"),
   title: {
-    default: "PanoPros — Media & Web Development in Bahrain",
+    default: "PanoPros — Media & Development in Bahrain",
     template: "%s | PanoPros",
   },
   description:
-    "Real estate photography, video, virtual tours, floor plans, and custom web development in Bahrain. PanoPros helps businesses look and perform their best online.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.panopros.bh"
-  ),
+    "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert. Based in Bahrain.",
+  keywords: ["photography", "video", "web development", "mobile apps", "Bahrain", "real estate media"],
+  authors: [{ name: "PanoPros" }],
+  creator: "PanoPros",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://panopros.bh" },
   openGraph: {
+    title: "PanoPros — Media & Development in Bahrain",
+    description:
+      "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert.",
+    url: "https://panopros.bh",
     siteName: "PanoPros",
-    locale: "en_BH",
+    images: [
+      {
+        url: "https://panopros.bh/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PanoPros — Media & Development in Bahrain",
+      },
+    ],
+    locale: "en_US",
     type: "website",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "PanoPros — Media & Development in Bahrain",
+    description:
+      "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert.",
+    images: ["https://panopros.bh/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "PanoPros",
-  image: "https://www.panopros.bh/og-image.jpg",
-  url: "https://www.panopros.bh",
+  image: "https://panopros.bh/og-image.png",
+  url: "https://panopros.bh",
   telephone: "+97333330340",
   email: "info@panopros.bh",
   address: {
@@ -94,7 +119,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-bone text-ink antialiased">
+      <body
+        className="min-h-screen flex flex-col bg-bone text-ink antialiased"
+        suppressHydrationWarning
+      >
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

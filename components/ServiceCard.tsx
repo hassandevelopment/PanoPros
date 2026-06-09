@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { parseInlineBold } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 
-export default function ServiceCard({ title, image, images, objectPosition = "center", body, link }: Service) {
+export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link }: Service) {
   const parts = parseInlineBold(body);
   const isGif = image.endsWith(".gif");
   const hasSlideshow = images && images.length > 1;
@@ -36,7 +36,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
         (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.08)";
       }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden" style={imageBackground ? { backgroundColor: imageBackground } : undefined}>
         {hasSlideshow ? (
           <>
             {images.map((src, i) => (
@@ -77,7 +77,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
+            className={objectFit === "contain" ? "object-contain" : "object-cover"}
             style={{
               objectPosition,
               transition: isGif ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
@@ -88,7 +88,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             onMouseLeave={e => {
               if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
-            unoptimized={isGif}
+            unoptimized={isGif || image.endsWith(".svg")}
           />
         )}
       </div>

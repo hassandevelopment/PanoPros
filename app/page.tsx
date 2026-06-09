@@ -1,91 +1,51 @@
-import Image from "next/image";
 import Link from "next/link";
-import { services, devServices } from "@/lib/data/services";
-import ServiceCard from "@/components/ServiceCard";
-import CTAStrip from "@/components/CTAStrip";
+import { ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        <Image
-          src="/images/hero.jpg"
-          alt="Luxury property in Bahrain photographed by PanoPros"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-ink/45" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-body font-bold text-bone leading-tight">
-            Professional Media &amp; Web Development in Bahrain
-          </h1>
-          <p className="mt-6 text-bone/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Real estate photography that closes deals. Websites that turn visitors into customers.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/packages"
-              className="hero-btn bg-white text-ink font-semibold text-sm px-10 py-3.5 rounded w-full sm:w-auto text-center select-none"
-            >
-              View Packages
-            </Link>
-            <Link
-              href="/portfolio"
-              className="hero-btn bg-white text-ink font-semibold text-sm px-10 py-3.5 rounded w-full sm:w-auto text-center select-none"
-            >
-              See Our Work
+    <section
+      aria-label="Choose a craft: Media or Development"
+      className="grain relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12"
+    >
+      <div className="relative z-10 w-full max-w-5xl flex flex-col items-center">
+
+        {/* Accent line */}
+        <div className="home-line w-full max-w-md h-px bg-ink/20 mb-12 md:mb-16" />
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8">
+
+          <div className="home-word-1">
+            <Link href="/media" className="cta-link group flex flex-col items-center text-center">
+              <h2
+                className="cta-word text-6xl sm:text-7xl md:text-8xl font-medium tracking-[-0.02em] leading-none mb-6"
+                style={{ fontFamily: "var(--font-playfair), serif" }}
+              >
+                Media
+              </h2>
+              <span className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.24em] uppercase border-b border-ink/40 group-hover:border-ink pb-1 transition-colors">
+                See media work
+                <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </span>
             </Link>
           </div>
+
+          <div className="home-word-2">
+            <Link href="/development" className="cta-link group flex flex-col items-center text-center">
+              <h2
+                className="cta-word text-6xl sm:text-7xl md:text-8xl font-medium tracking-[-0.02em] leading-none mb-6"
+                style={{ fontFamily: "var(--font-playfair), serif" }}
+              >
+                Development
+              </h2>
+              <span className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.24em] uppercase border-b border-ink/40 group-hover:border-ink pb-1 transition-colors">
+                See development work
+                <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </span>
+            </Link>
+          </div>
+
         </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-20 md:py-28 bg-bone">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
-              Services
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink">
-              What We Do
-            </h2>
-          </div>
-
-          {/* Real Estate Media */}
-          <div className="mb-4">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Real Estate Media</p>
-            <h3 className="text-xl font-semibold text-ink mb-8">Photography, Video &amp; Virtual Tours</h3>
-          </div>
-          <div className="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-
-          {/* Divider */}
-          <div className="my-16 flex items-center gap-6">
-            <div className="flex-1 h-px bg-cream" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-muted px-2">Also</span>
-            <div className="flex-1 h-px bg-cream" />
-          </div>
-
-          {/* Web & App Development */}
-          <div className="mb-4">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Web &amp; App Development</p>
-            <h3 className="text-xl font-semibold text-ink mb-8">Custom Websites for Bahraini Businesses</h3>
-          </div>
-          <div className="dev-service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {devServices.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTAStrip />
-    </>
+      </div>
+    </section>
   );
 }
