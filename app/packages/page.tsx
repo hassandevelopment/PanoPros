@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ScrollReveal from "@/components/ScrollReveal";
 import PackagesClient from "@/components/PackagesClient";
 
 export const metadata: Metadata = {
@@ -10,20 +9,19 @@ export const metadata: Metadata = {
 
 export default function PackagesPage() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
+    <section className="grain pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <ScrollReveal className="text-center mb-16">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
-            Pricing
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-ink">
-            Simple, Transparent Packages
+        <div className="text-center mb-16">
+          <h1
+            className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Packages
           </h1>
-          <p className="mt-4 text-charcoal max-w-xl mx-auto leading-relaxed">
-            Two disciplines, one team. Real estate media to attract buyers,
-            and custom web development to build your business online.
+          <p className="home-word-2 text-base md:text-lg text-ink/60 max-w-lg mx-auto">
+            Transparent pricing. No surprises.
           </p>
-        </ScrollReveal>
+        </div>
 
         <PackagesClient />
       </div>
