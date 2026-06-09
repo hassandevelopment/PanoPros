@@ -10,12 +10,7 @@ export interface Service {
 export const devServices: Service[] = [
   {
     title: "Business Websites",
-    image: "/images/services/dev-websites-1.jpg",
-    images: [
-      "/images/services/dev-websites-1.jpg",
-      "/images/services/dev-websites-2.jpg",
-      "/images/services/dev-websites-3.jpg",
-    ],
+    image: "/images/services/dev-landing.png",
     objectPosition: "center",
     body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
   },
@@ -27,7 +22,12 @@ export const devServices: Service[] = [
   },
   {
     title: "Landing Pages",
-    image: "/images/services/dev-landing.png",
+    image: "/images/services/dev-websites-1.jpg",
+    images: [
+      "/images/services/dev-websites-1.jpg",
+      "/images/services/dev-websites-2.jpg",
+      "/images/services/dev-websites-3.jpg",
+    ],
     objectPosition: "center",
     body: "Single-page sites built for speed, clarity, and a professional first impression.",
   },
