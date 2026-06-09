@@ -27,6 +27,14 @@ export const devProjects: DevProject[] = [
     category: "Development",
   },
   {
+    title: "CAS Premium",
+    client: "Premium Car Care · Bahrain",
+    description: "High-end auto detailing, ceramic coatings, and PPF — a premium site built to attract serious car enthusiasts.",
+    href: "https://hassandevelopment.github.io/CAS-Premium/",
+    screenshot: "/images/dev/screenshots/cas-premium.png",
+    category: "Development",
+  },
+  {
     title: "Mélo Beauty Lounge",
     client: "Hair, Nails & Café · Barbar, Bahrain",
     description: "Full-service salon with an in-house café — hair colour, treatments, manicures, and pedicures in Barbar, Bahrain.",
@@ -48,14 +56,6 @@ export const devProjects: DevProject[] = [
     description: "Authentic wood-fired Italian dining — a full-service restaurant site built to drive reservations.",
     href: "https://hassandevelopment.github.io/gusto-web/",
     screenshot: "/images/dev/screenshots/gusto-pizzeria-ristorante.png",
-    category: "Development",
-  },
-  {
-    title: "CAS Premium",
-    client: "Premium Car Care · Bahrain",
-    description: "High-end auto detailing, ceramic coatings, and PPF — a premium site built to attract serious car enthusiasts.",
-    href: "https://hassandevelopment.github.io/CAS-Premium/",
-    screenshot: "/images/dev/screenshots/cas-premium.png",
     category: "Development",
   },
   {
