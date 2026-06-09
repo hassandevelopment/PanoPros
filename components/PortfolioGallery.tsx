@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -92,6 +93,15 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
           ))}
         </div>
       )}
+
+      <div className="flex justify-center mt-12 md:mt-16">
+        <Link
+          href="/packages"
+          className="inline-block border border-ink text-ink rounded-full px-8 py-3 text-sm font-medium hover:bg-ink hover:text-bone transition-colors"
+        >
+          View Pricing
+        </Link>
+      </div>
 
       <Lightbox
         open={index >= 0}
