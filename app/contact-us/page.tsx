@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
-import InstagramIcon from "@/components/InstagramIcon";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -12,80 +9,34 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mb-14">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
-            Get in Touch
-          </p>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-ink">
-            Ready to Stand Out?
+    <section className="grain bg-bone min-h-screen px-6">
+      <div className="max-w-xl mx-auto pt-32 md:pt-40 pb-20 md:pb-28">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h1
+            className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Contact
           </h1>
-          <p className="mt-4 text-charcoal max-w-lg mx-auto leading-relaxed">
-            Whether it&apos;s a property shoot or a new website — tell us what
-            you need and we&apos;ll get back to you within one business day.
+          <p className="home-word-2 text-base md:text-lg text-ink/60 max-w-lg mx-auto">
+            Let&apos;s talk about your project.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
-          {/* Contact info */}
-          <div className="lg:col-span-2 bg-ink rounded-2xl p-8 text-bone space-y-6">
-            <h2 className="font-heading text-xl font-semibold">
-              Contact Information
-            </h2>
+        {/* Form */}
+        <ContactForm />
 
-            <a
-              href="mailto:info@panopros.bh"
-              className="flex items-start gap-3 hover:text-bone/80 transition-colors group"
-            >
-              <Mail size={18} className="mt-0.5 shrink-0 text-muted group-hover:text-bone transition-colors" />
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider mb-0.5">Email</p>
-                <p className="text-sm">info@panopros.bh</p>
-              </div>
-            </a>
-
-            <a
-              href="tel:+97333330340"
-              className="flex items-start gap-3 hover:text-bone/80 transition-colors group"
-            >
-              <Phone size={18} className="mt-0.5 shrink-0 text-muted group-hover:text-bone transition-colors" />
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider mb-0.5">Phone</p>
-                <p className="text-sm">+973 3333 0340</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.instagram.com/panopros.bh/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-3 hover:text-bone/80 transition-colors group"
-            >
-              <InstagramIcon size={18} className="mt-0.5 shrink-0 text-muted group-hover:text-bone transition-colors" />
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider mb-0.5">Instagram</p>
-                <p className="text-sm">@panopros.bh</p>
-              </div>
-            </a>
-
-            <div className="flex items-start gap-3">
-              <MapPin size={18} className="mt-0.5 shrink-0 text-muted" />
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider mb-0.5">Service Area</p>
-                <p className="text-sm">Serving all of Bahrain</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Form */}
-          <div className="lg:col-span-3">
-            <Suspense fallback={<div className="h-96 animate-pulse bg-cream rounded-2xl" />}>
-              <ContactForm />
-            </Suspense>
-          </div>
-        </div>
+        {/* Direct email */}
+        <p className="mt-10 text-center text-sm text-ink/50">
+          Or email us directly at{" "}
+          <a
+            href="mailto:info@panopros.bh"
+            className="underline underline-offset-2 hover:text-ink/80 transition-colors"
+          >
+            info@panopros.bh
+          </a>
+        </p>
       </div>
     </section>
   );

@@ -13,11 +13,14 @@ export default function AboutPage() {
     <section className="grain bg-bone min-h-screen flex flex-col items-center justify-center px-6 text-center">
       <div className="w-full max-w-2xl mx-auto py-32 md:py-40">
         <h1
-          className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-12 md:mb-16"
+          className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
           style={{ fontFamily: "var(--font-playfair), serif" }}
         >
           About
         </h1>
+        <p className="home-word-2 text-base md:text-lg text-ink/60 max-w-lg mx-auto mb-12 md:mb-16">
+          Founded in Bahrain. Built on results.
+        </p>
 
         <ScrollReveal>
           <p className="text-base md:text-lg text-ink/70 leading-relaxed">
