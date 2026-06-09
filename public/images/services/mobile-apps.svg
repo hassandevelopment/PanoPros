@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- background -->
+  <rect width="800" height="600" fill="#F0F0F0"/>
+
+  <!-- soft shadow -->
+  <rect x="294" y="120" width="220" height="372" rx="34" fill="#1a1a1a" opacity="0.06"/>
+
+  <!-- phone body outline -->
+  <rect x="288" y="114" width="224" height="372" rx="34" fill="white" stroke="#1a1a1a" stroke-width="9"/>
+
+  <!-- screen area -->
+  <rect x="303" y="152" width="194" height="288" rx="4" fill="#1a1a1a" opacity="0.04"/>
+
+  <!-- top speaker pill -->
+  <rect x="368" y="134" width="64" height="8" rx="4" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- volume buttons (left) -->
+  <rect x="280" y="198" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+  <rect x="280" y="244" width="7" height="36" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- power button (right) -->
+  <rect x="513" y="218" width="7" height="46" rx="3.5" fill="#1a1a1a" opacity="0.18"/>
+
+  <!-- home indicator bar -->
+  <rect x="365" y="462" width="70" height="5" rx="2.5" fill="#1a1a1a" opacity="0.22"/>
+
+  <!-- </> symbol -->
+  <text x="400" y="300"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="'SF Mono','Fira Code','Cascadia Code','Courier New',monospace"
+        font-size="62"
+        font-weight="700"
+        fill="#1a1a1a"
+        letter-spacing="-2">
+    &lt;/&gt;
+  </text>
+</svg>

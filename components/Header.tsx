@@ -13,7 +13,7 @@ import { LogoLockup } from "./Logo";
  * When unscrolled on these pages, header text must be light (bone).
  * Everywhere else, header text is dark (ink).
  */
-const DARK_HERO_ROUTES = ["/development"];
+const DARK_HERO_ROUTES: string[] = [];
 
 function hasDarkHero(pathname: string): boolean {
   return DARK_HERO_ROUTES.some(

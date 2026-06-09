@@ -88,7 +88,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             onMouseLeave={e => {
               if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
-            unoptimized={isGif}
+            unoptimized={isGif || image.endsWith(".svg")}
           />
         )}
       </div>

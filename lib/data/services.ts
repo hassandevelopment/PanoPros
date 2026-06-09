@@ -17,25 +17,31 @@ export const devServices: Service[] = [
       "/images/services/dev-websites-3.jpg",
     ],
     objectPosition: "center",
-    body: "**A website that works as hard as you do.** Custom-built, mobile-first, and designed to convert visitors into customers — not just to look good.",
+    body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
+  },
+  {
+    title: "Mobile Applications",
+    image: "/images/services/mobile-apps.svg",
+    objectPosition: "center",
+    body: "Custom iOS and Android apps built for your business workflow.",
   },
   {
     title: "Landing Pages",
     image: "/images/services/dev-landing.png",
     objectPosition: "center",
-    body: "Single-page sites built for speed and clarity. Perfect for new businesses, campaigns, or services that need a professional online presence fast.",
+    body: "Single-page sites built for speed, clarity, and a professional first impression.",
   },
   {
     title: "Brand Identity & Design",
     image: "/images/services/dev-branding.png",
     objectPosition: "center",
-    body: "Logo, colour palette, typography, and the visual language your business needs to look credible and consistent from day one.",
+    body: "Logo, colours, and typography that make your business look credible from day one.",
   },
   {
     title: "SEO & Performance",
     image: "/images/portfolio/exterior-1.webp",
     objectPosition: "center",
-    body: "Fast load times, clean code, and Google-ready structure baked in from the start — not bolted on after the fact.",
+    body: "Fast load times and Google-ready structure baked in from the start.",
   },
 ];
 
