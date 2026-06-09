@@ -21,7 +21,7 @@ export const devServices: Service[] = [
   },
   {
     title: "Mobile Applications",
-    image: "/images/services/mobile-apps.svg",
+    image: "/images/services/mobile-apps.png",
     objectPosition: "center",
     body: "Custom iOS and Android apps built for your business workflow.",
   },
