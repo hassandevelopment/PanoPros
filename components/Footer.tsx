@@ -38,7 +38,7 @@ export default function Footer() {
 
         {/* Bottom row: thin divider + copyright */}
         <div className="mt-6 md:mt-8 pt-4 border-t border-bone/15 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-[10px] tracking-[0.32em] text-bone/50">
-          <p>© 2026 PANOPROS &nbsp;·&nbsp; MANAMA, BAHRAIN</p>
+          <p>© 2026 PANOPROS &nbsp;·&nbsp; MANAMA, BAHRAIN &nbsp;·&nbsp; CR 197430-1</p>
           <p>MEDIA &nbsp;·&nbsp; DEVELOPMENT</p>
         </div>
       </div>
