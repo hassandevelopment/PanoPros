@@ -27,14 +27,6 @@ export const devProjects: DevProject[] = [
     category: "Development",
   },
   {
-    title: "PanoPros",
-    client: "Real Estate Media · Bahrain",
-    description: "Professional photography, videography, virtual tours, floor plans, and virtual staging for Bahrain's property market.",
-    href: "https://www.panopros.bh",
-    screenshot: "/images/dev/screenshots/panopros.png",
-    category: "Development",
-  },
-  {
     title: "Mélo Beauty Lounge",
     client: "Hair, Nails & Café · Barbar, Bahrain",
     description: "Full-service salon with an in-house café — hair colour, treatments, manicures, and pedicures in Barbar, Bahrain.",
