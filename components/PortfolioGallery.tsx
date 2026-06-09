@@ -68,17 +68,16 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
           {portfolioImages.map((img, i) => (
             <button
               key={img.src}
-              className="portfolio-item relative w-full overflow-hidden rounded-xl cursor-zoom-in block"
+              className="portfolio-item relative w-full overflow-hidden rounded-xl cursor-zoom-in block aspect-[4/3]"
               onClick={() => setIndex(i)}
               aria-label={`View: ${img.alt}`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
-                width={800}
-                height={600}
+                fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="w-full h-auto object-cover"
+                className="object-cover"
                 style={{ transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
