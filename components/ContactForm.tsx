@@ -25,6 +25,7 @@ export default function ContactForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
+    console.log("ContactForm onSubmit called", data); // TODO: remove debug log
     setStatus("loading");
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -65,14 +66,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
       {/* Honeypot */}
-      <input
-        type="checkbox"
-        {...register("botcheck")}
-        className="hidden"
-        aria-hidden="true"
-        tabIndex={-1}
-        autoComplete="off"
-      />
+      <input type="hidden" {...register("botcheck")} value="" />
 
       <Field label="Name *" error={errors.name?.message}>
         <input
@@ -107,6 +101,11 @@ export default function ContactForm() {
           rows={4}
           placeholder="Tell us about your project…"
           className={`${inputCls(!!errors.message)} resize-none`}
+          onKeyDown={(e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+              handleSubmit(onSubmit)();
+            }
+          }}
         />
       </Field>
 
