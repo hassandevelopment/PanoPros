@@ -37,7 +37,8 @@ export const metadata: Metadata = {
     siteName: "PanoPros",
     images: [
       {
-        url: "https://panopros.bh/og-image.png",
+        url: "https://panopros.bh/og-image.jpg",
+        secureUrl: "https://panopros.bh/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "PanoPros — Media & Development in Bahrain",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     title: "PanoPros — Media & Development in Bahrain",
     description:
       "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert.",
-    images: ["https://panopros.bh/og-image.png"],
+    images: ["https://panopros.bh/og-image.jpg"],
   },
   icons: {
     icon: [
@@ -66,7 +67,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "PanoPros",
-  image: "https://panopros.bh/og-image.png",
+  image: "https://panopros.bh/og-image.jpg",
   url: "https://panopros.bh",
   telephone: "+97333330340",
   email: "info@panopros.bh",
