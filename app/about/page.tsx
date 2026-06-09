@@ -1,6 +1,6 @@
+import Link from "next/link";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
-import Image from "next/image";
-import CTAStrip from "@/components/CTAStrip";
 
 export const metadata: Metadata = {
   title: "About",
@@ -10,98 +10,32 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-            {/* Text */}
-            <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">
-                Our Story
-              </p>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-ink leading-tight">
-                We Make Your Business Impossible to Ignore
-              </h1>
+    <section className="grain bg-bone min-h-screen flex flex-col items-center justify-center px-6 text-center">
+      <div className="w-full max-w-2xl mx-auto py-32 md:py-40">
+        <h1
+          className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-12 md:mb-16"
+          style={{ fontFamily: "var(--font-playfair), serif" }}
+        >
+          About
+        </h1>
 
-              <div className="mt-10 space-y-8 text-charcoal leading-relaxed">
-                <div>
-                  <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-                    Our Story
-                  </h2>
-                  <p>
-                    We started PanoPros because we saw a simple truth:{" "}
-                    <strong className="text-ink font-semibold">
-                      most listings don&apos;t show properties the way buyers
-                      really want to see them.
-                    </strong>{" "}
-                    Poor visuals cost time, interest, and opportunities. That
-                    same principle extends to every business online — if your
-                    website doesn&apos;t represent you well, you&apos;re losing
-                    customers before they&apos;ve said a word.
-                  </p>
-                </div>
+        <ScrollReveal>
+          <p className="text-base md:text-lg text-ink/70 leading-relaxed">
+            PanoPros is a media and development studio based in Manama, Bahrain.
+            We shoot property media that sells and build websites and apps that convert.
+            Founded by Hassan Alnajjar.
+          </p>
+        </ScrollReveal>
 
-                <div>
-                  <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-                    What We Do
-                  </h2>
-                  <p>
-                    We help businesses make the right impression online. For
-                    realtors, that means professional photography, cinematic
-                    videos, immersive virtual tours, and clear floor plans. For
-                    businesses that need a web presence, that means
-                    custom-coded websites designed to convert — mobile-first,
-                    SEO-ready, and delivered fast.
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-                    Why It Matters
-                  </h2>
-                  <p>
-                    Better visuals lead to better engagement, fewer wasted
-                    showings, and stronger interest from qualified buyers. A
-                    well-built website turns visitors into customers before
-                    you&apos;ve said a word. We combine creativity with results
-                    across both disciplines so your business stands out and
-                    works harder for you.
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-                    Who We Are
-                  </h2>
-                  <p>
-                    PanoPros is founded and led by{" "}
-                    <strong className="text-ink font-semibold">
-                      Hassan Alnajjar
-                    </strong>
-                    , who brings passion, technical skill, and personal
-                    dedication to every project. We treat every listing and
-                    every website as an opportunity to elevate your brand and
-                    your results.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Photo */}
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/founder-hassan.jpg"
-                alt="Hassan Alnajjar, founder of PanoPros, holding a drone controller"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-top"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CTAStrip />
-    </>
+        <ScrollReveal className="mt-12 md:mt-16">
+          <Link
+            href="/contact-us"
+            className="inline-block border border-ink text-ink rounded-full px-8 py-3 text-sm font-medium hover:bg-ink hover:text-bone transition-colors"
+          >
+            Get in Touch
+          </Link>
+        </ScrollReveal>
+      </div>
+    </section>
   );
 }
