@@ -14,6 +14,7 @@ export default function MediaPage() {
     <section className="grain bg-bone min-h-screen">
       {/* Typographic header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-16 md:pb-20 text-center">
+        <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
         <h1
           className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
           style={{ fontFamily: "var(--font-playfair), serif" }}

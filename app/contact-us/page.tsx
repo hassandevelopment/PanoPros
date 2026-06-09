@@ -13,6 +13,7 @@ export default function ContactPage() {
       <div className="max-w-xl mx-auto pt-32 md:pt-40 pb-20 md:pb-28">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
+          <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
           <h1
             className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
             style={{ fontFamily: "var(--font-playfair), serif" }}

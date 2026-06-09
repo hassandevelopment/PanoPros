@@ -12,6 +12,7 @@ export default function AboutPage() {
   return (
     <section className="grain bg-bone min-h-screen flex flex-col items-center justify-center px-6 text-center">
       <div className="w-full max-w-2xl mx-auto py-32 md:py-40">
+        <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
         <h1
           className="home-word-1 text-5xl md:text-7xl font-medium tracking-[-0.02em] leading-none text-ink mb-6"
           style={{ fontFamily: "var(--font-playfair), serif" }}
