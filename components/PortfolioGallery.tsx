@@ -8,8 +8,11 @@ import { portfolioCategories, portfolioImages, devProjects } from "@/lib/data/po
 import type { PortfolioCategory } from "@/lib/data/portfolio";
 import DevProjectCard from "./DevProjectCard";
 
-export default function PortfolioGallery() {
-  const [active, setActive] = useState<PortfolioCategory>("All");
+export default function PortfolioGallery({ initialFilter }: { initialFilter?: string }) {
+  const resolved = portfolioCategories.find(
+    (c) => c.toLowerCase() === initialFilter?.toLowerCase()
+  ) ?? "All";
+  const [active, setActive] = useState<PortfolioCategory>(resolved);
   const [index, setIndex] = useState(-1);
 
   const showPhotos = active !== "Development";

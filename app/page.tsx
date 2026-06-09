@@ -1,91 +1,96 @@
-import Image from "next/image";
 import Link from "next/link";
-import { services, devServices } from "@/lib/data/services";
-import ServiceCard from "@/components/ServiceCard";
-import CTAStrip from "@/components/CTAStrip";
+import { ArrowUpRight } from "lucide-react";
+import { LogoMark, LogoLockup } from "@/components/Logo";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function HomePage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        <Image
-          src="/images/hero.jpg"
-          alt="Luxury property in Bahrain photographed by PanoPros"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-ink/45" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-body font-bold text-bone leading-tight">
-            Professional Media &amp; Web Development in Bahrain
-          </h1>
-          <p className="mt-6 text-bone/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Real estate photography that closes deals. Websites that turn visitors into customers.
+    <section
+      aria-label="Choose a craft: Media or Development"
+      className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12 py-20 md:py-24"
+    >
+      {/* Brand lockup — mark + wordmark + tagline */}
+      <div className="mb-12 md:mb-16">
+        <LogoLockup size="md" direction="vertical" showTagline />
+      </div>
+
+      {/* Lead */}
+      <ScrollReveal delay={100} className="text-center mb-10 md:mb-14">
+        <h1
+          className="text-3xl md:text-4xl lg:text-5xl font-medium text-ink text-center max-w-3xl leading-tight"
+          style={{ fontFamily: "var(--font-playfair), serif" }}
+        >
+          Professional Media &amp; Development in Bahrain
+        </h1>
+        <p className="mt-4 text-sm md:text-base text-ink/70 max-w-2xl mx-auto leading-relaxed">
+          Photography, video, and visual content that gets noticed. Websites and mobile apps that convert. Your brand&apos;s full digital presence, built in Bahrain.
+        </p>
+      </ScrollReveal>
+
+      {/* Two CTAs */}
+      <ScrollReveal delay={200} className="w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-10 md:gap-12 lg:gap-20">
+
+        {/* MEDIA */}
+        <Link
+          href="/media"
+          className="cta-link group flex flex-col items-center text-center min-w-0"
+        >
+          <p className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-ink/50 mb-4">
+            01 &nbsp;/&nbsp; SHOOT
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/packages"
-              className="hero-btn bg-white text-ink font-semibold text-sm px-10 py-3.5 rounded w-full sm:w-auto text-center select-none"
-            >
-              View Packages
-            </Link>
-            <Link
-              href="/portfolio"
-              className="hero-btn bg-white text-ink font-semibold text-sm px-10 py-3.5 rounded w-full sm:w-auto text-center select-none"
-            >
-              See Our Work
-            </Link>
-          </div>
+          <h2
+            className="cta-word text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-[-0.02em] leading-none mb-5"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Media
+          </h2>
+          <p className="text-sm md:text-base text-ink/70 max-w-xs leading-relaxed mb-6">
+            Photography, video, virtual tours, floor plans, brand work.
+          </p>
+          <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium tracking-[0.24em] uppercase border-b border-ink/40 group-hover:border-ink pb-1 transition-colors">
+            See media work
+            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        </Link>
+
+        {/* Divider mark */}
+        <div className="flex flex-col items-center text-ink/70" aria-hidden="true">
+          <div className="hidden md:block w-px h-16 bg-ink/20 mb-4"></div>
+          <LogoMark size={44} />
+          <div className="hidden md:block w-px h-16 bg-ink/20 mt-4"></div>
         </div>
-      </section>
 
-      {/* Services */}
-      <section id="services" className="py-20 md:py-28 bg-bone">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
-              Services
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink">
-              What We Do
-            </h2>
-          </div>
+        {/* DEVELOPMENT */}
+        <Link
+          href="/development"
+          className="cta-link group flex flex-col items-center text-center min-w-0"
+        >
+          <p className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-ink/50 mb-4">
+            02 &nbsp;/&nbsp; BUILD
+          </p>
+          <h2
+            className="cta-word text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-[-0.02em] leading-none mb-5"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Development
+          </h2>
+          <p className="text-sm md:text-base text-ink/70 max-w-xs leading-relaxed mb-6">
+            Custom websites, landing pages, mobile apps, brand identity.
+          </p>
+          <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium tracking-[0.24em] uppercase border-b border-ink/40 group-hover:border-ink pb-1 transition-colors">
+            See development work
+            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        </Link>
 
-          {/* Real Estate Media */}
-          <div className="mb-4">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Real Estate Media</p>
-            <h3 className="text-xl font-semibold text-ink mb-8">Photography, Video &amp; Virtual Tours</h3>
-          </div>
-          <div className="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
+      </div>
+      </ScrollReveal>
 
-          {/* Divider */}
-          <div className="my-16 flex items-center gap-6">
-            <div className="flex-1 h-px bg-cream" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-muted px-2">Also</span>
-            <div className="flex-1 h-px bg-cream" />
-          </div>
-
-          {/* Web & App Development */}
-          <div className="mb-4">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Web &amp; App Development</p>
-            <h3 className="text-xl font-semibold text-ink mb-8">Custom Websites for Bahraini Businesses</h3>
-          </div>
-          <div className="dev-service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {devServices.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTAStrip />
-    </>
+      {/* Bottom byline */}
+      <p className="mt-16 md:mt-24 text-[10px] md:text-xs tracking-[0.36em] text-ink/40 text-center">
+        EST. 2026 &nbsp;·&nbsp; MANAMA, BAHRAIN
+      </p>
+    </section>
   );
 }
