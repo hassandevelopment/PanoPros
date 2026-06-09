@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <section
       aria-label="Choose a craft: Media or Development"
-      className="grain relative min-h-[calc(100dvh-4rem)] md:min-h-[calc(100dvh-5rem)] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12"
+      className="grain relative min-h-[100dvh] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12"
     >
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center">
 
