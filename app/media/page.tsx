@@ -36,7 +36,13 @@ export default function MediaPage() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="flex justify-center mt-12 md:mt-16">
+        <ScrollReveal className="flex flex-col items-center gap-4 mt-12 md:mt-16">
+          <Link
+            href="/development"
+            className="inline-block bg-ink text-bone rounded-full px-8 py-3 text-sm font-medium hover:bg-charcoal transition-colors"
+          >
+            View Development
+          </Link>
           <Link
             href="/packages"
             className="inline-block border border-ink text-ink rounded-full px-8 py-3 text-sm font-medium hover:bg-ink hover:text-bone transition-colors"
