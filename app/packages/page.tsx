@@ -3,7 +3,6 @@ import Link from "next/link";
 import { packages, devPackages, carePlan } from "@/lib/data/packages";
 import type { Package } from "@/lib/data/packages";
 import PackageCard from "@/components/PackageCard";
-import CTAStrip from "@/components/CTAStrip";
 
 export const metadata: Metadata = {
   title: "Packages",
@@ -65,7 +64,7 @@ export default function PackagesPage() {
           </div>
 
           {/* ── Web & App Development ── */}
-          <div className="mb-10">
+          <div id="development" className="mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-1">Web &amp; App Development</p>
             <h2 className="text-2xl font-bold text-ink">Custom Websites for Bahraini Businesses</h2>
             <p className="mt-2 text-charcoal text-sm">Pick the package that matches where your business is right now.</p>
@@ -137,8 +136,6 @@ export default function PackagesPage() {
           </div>
         </div>
       </section>
-
-      <CTAStrip />
     </>
   );
 }

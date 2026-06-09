@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
-import CTAStrip from "@/components/CTAStrip";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft } from "lucide-react";
 
@@ -71,7 +70,6 @@ export default function MediaPage() {
         </div>
       </section>
 
-      <CTAStrip />
     </>
   );
 }

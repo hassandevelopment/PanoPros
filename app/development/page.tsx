@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { devServices } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
-import CTAStrip from "@/components/CTAStrip";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -120,10 +119,25 @@ export default function DevelopmentPage() {
               <ServiceCard key={service.title} {...service} />
             ))}
           </div>
+
+          {/* CTAs — see work / view packages */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/portfolio?filter=development"
+              className="inline-flex items-center gap-2 bg-ink text-bone text-sm font-semibold px-8 py-3 rounded-full hover:bg-charcoal transition-colors"
+            >
+              See our development work
+              <ArrowRight size={15} />
+            </Link>
+            <Link
+              href="/packages"
+              className="inline-flex items-center gap-2 border border-ink text-ink text-sm font-semibold px-8 py-3 rounded-full hover:bg-ink hover:text-bone transition-colors"
+            >
+              View Packages
+            </Link>
+          </div>
         </div>
       </section>
-
-      <CTAStrip />
     </>
   );
 }
