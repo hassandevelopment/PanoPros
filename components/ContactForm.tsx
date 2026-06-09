@@ -13,7 +13,7 @@ const schema = z.object({
   location: z.string().optional(),
   package: z.string().optional(),
   message: z.string().min(10, "Please write a brief message"),
-  _honey: z.string().max(0, ""),
+  botcheck: z.string().max(0, ""),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -49,12 +49,24 @@ export default function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setStatus("loading");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          from_name: "PanoPros Website",
+          subject: `New inquiry from ${data.name}`,
+          name: data.name,
+          email: data.email,
+          phone: data.phone ?? "",
+          location: data.location ?? "",
+          package: data.package ?? "",
+          message: data.message,
+          botcheck: data.botcheck,
+        }),
       });
-      if (!res.ok) throw new Error();
+      const json = await res.json();
+      if (!res.ok || !json.success) throw new Error(json.message);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -78,8 +90,8 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
       {/* Honeypot */}
       <input
-        type="text"
-        {...register("_honey")}
+        type="checkbox"
+        {...register("botcheck")}
         className="hidden"
         aria-hidden="true"
         tabIndex={-1}
