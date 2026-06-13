@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "media": "الإعلام",
+    "development": "التطوير",
+    "portfolio": "الأعمال",
+    "pricing": "الأسعار",
+    "about": "عنا",
+    "contact": "اتصل بنا"
+  },
+  "common": {
+    "requestQuote": "اطلب عرض سعر",
+    "callNow": "اتصل الآن",
+    "getInTouch": "تواصل معنا",
+    "learnMore": "اعرف أكثر",
+    "viewPortfolio": "شاهد أعمالنا",
+    "viewPricing": "عرض الأسعار"
+  },
+  "home": {
+    "hero": {
+      "headline": "تصوير وفيديو يجذب المشترين الجادين",
+      "ctaPrimary": "الباقات",
+      "ctaSecondary": "شاهد أعمالنا"
+    },
+    "services": {
+      "eyebrow": "خدماتنا"
+    },
+    "cta": {
+      "text": "إعلام احترافي.",
+      "textBold": "نتائج حقيقية."
+    }
+  },
+  "packages": {
+    "heading": "الباقات",
+    "tagline": "كل مشروع فريد من نوعه. لنتحدث.",
+    "tabs": {
+      "development": "تطوير الويب والتطبيقات",
+      "media": "إعلام العقارات"
+    },
+    "devSection": {
+      "eyebrow": "تطوير الويب والتطبيقات",
+      "heading": "مواقع مخصصة للشركات البحرينية",
+      "subtext": "اختر الباقة المناسبة لمرحلة عملك الحالية."
+    },
+    "mediaSection": {
+      "eyebrow": "إعلام العقارات",
+      "heading": "تصوير، فيديو والمزيد",
+      "subtext": "نتولى كل جلسة تصوير بأنفسنا — لا تعهيد، لا اختصارات.",
+      "helpText": "لست متأكداً من الباقة المناسبة؟",
+      "helpLink": "تواصل معنا"
+    },
+    "howItWorks": {
+      "eyebrow": "كيف يعمل",
+      "heading": "عملية بسيطة من 4 خطوات."
+    },
+    "carePlan": {
+      "eyebrow": "حافظ على موقعك"
+    },
+    "addOns": {
+      "eyebrow": "طوّر مشروعك",
+      "heading": "إضافات اختيارية"
+    },
+    "goodToKnow": {
+      "eyebrow": "معلومة مفيدة"
+    }
+  },
+  "portfolio": {
+    "heading": "أعمالنا",
+    "tagline": "مجموعة مختارة من أعمالنا في البحرين.",
+    "filters": {
+      "all": "الكل",
+      "photography": "التصوير",
+      "virtualStaging": "التأثيث الافتراضي",
+      "floorPlans": "مخططات الطوابق",
+      "kitchens": "المطابخ والديكور الداخلي"
+    }
+  },
+  "about": {
+    "heading": "عنا"
+  },
+  "contact": {
+    "heading": "هل أنت مستعد للتميز؟",
+    "subheading": "أخبرنا عن عقارك وسنرد عليك خلال يوم عمل واحد.",
+    "submitButton": "إرسال الاستفسار",
+    "successMessage": "شكراً — سنتواصل معك خلال يوم عمل واحد."
+  },
+  "footer": {
+    "tagline": "إعلام احترافي.",
+    "taglineBold": "نتائج حقيقية.",
+    "rights": "جميع الحقوق محفوظة."
+  }
+}

@@ -4,7 +4,7 @@ import PackagesClient from "@/components/PackagesClient";
 export const metadata: Metadata = {
   title: "Packages",
   description:
-    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites.",
+    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
 };
 
 export default function PackagesPage() {
@@ -20,7 +20,7 @@ export default function PackagesPage() {
             Packages
           </h1>
           <p className="home-word-2 text-base md:text-lg text-ink/60 max-w-lg mx-auto">
-            Transparent pricing. No surprises.
+            Every project is unique. Let&apos;s talk.
           </p>
         </div>
 

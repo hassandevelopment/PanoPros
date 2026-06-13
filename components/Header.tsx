@@ -7,6 +7,8 @@ import InstagramIcon from "./InstagramIcon";
 import { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 import { LogoLockup } from "./Logo";
+import { useLocale } from "next-intl";
+import { useLocalePath, useLocaleRouter } from "@/lib/navigation";
 
 /**
  * Routes whose hero starts with a dark image background.
@@ -29,6 +31,33 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact-us" },
 ];
+
+function LocaleToggle({ textColor }: { textColor: string }) {
+  const locale = useLocale();
+  const localePath = useLocalePath();
+  const router = useLocaleRouter();
+
+  const toggle = () => {
+    const next = locale === "en" ? "ar" : "en";
+    router.replace(localePath, { locale: next });
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      aria-label="Switch language"
+      className="text-xs font-semibold tracking-widest uppercase opacity-70 hover:opacity-100 px-2 py-1 rounded border"
+      style={{
+        color: textColor,
+        borderColor: textColor,
+        transition: "opacity 150ms ease-out",
+        opacity: 0.7,
+      }}
+    >
+      {locale === "en" ? "عربي" : "EN"}
+    </button>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

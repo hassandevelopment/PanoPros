@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "media": "Media",
+    "development": "Development",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "requestQuote": "Request a Quote",
+    "callNow": "Call Now",
+    "getInTouch": "Get in touch",
+    "learnMore": "Learn More",
+    "viewPortfolio": "See Our Work",
+    "viewPricing": "View Pricing"
+  },
+  "home": {
+    "hero": {
+      "headline": "Photography & Video That Attract Serious Buyers",
+      "ctaPrimary": "Packages",
+      "ctaSecondary": "See Our Work"
+    },
+    "services": {
+      "eyebrow": "Services"
+    },
+    "cta": {
+      "text": "Professional media.",
+      "textBold": "Serious results."
+    }
+  },
+  "packages": {
+    "heading": "Packages",
+    "tagline": "Every project is unique. Let's talk.",
+    "tabs": {
+      "development": "Web & App Development",
+      "media": "Real Estate Media"
+    },
+    "devSection": {
+      "eyebrow": "Web & App Development",
+      "heading": "Custom Websites for Bahraini Businesses",
+      "subtext": "Pick the package that matches where your business is right now."
+    },
+    "mediaSection": {
+      "eyebrow": "Real Estate Media",
+      "heading": "Photography, Video & More",
+      "subtext": "Every shoot is handled personally — no outsourcing, no shortcuts.",
+      "helpText": "Not sure which package?",
+      "helpLink": "Get in touch"
+    },
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "heading": "A simple 4-step process."
+    },
+    "carePlan": {
+      "eyebrow": "Keep It Running"
+    },
+    "addOns": {
+      "eyebrow": "Enhance Your Project",
+      "heading": "Optional Add-Ons"
+    },
+    "goodToKnow": {
+      "eyebrow": "Good to Know"
+    }
+  },
+  "portfolio": {
+    "heading": "Portfolio",
+    "tagline": "A selection of our work across Bahrain.",
+    "filters": {
+      "all": "All",
+      "photography": "Photography",
+      "virtualStaging": "Virtual Staging",
+      "floorPlans": "Floor Plans",
+      "kitchens": "Kitchens & Interiors"
+    }
+  },
+  "about": {
+    "heading": "About"
+  },
+  "contact": {
+    "heading": "Ready to Stand Out?",
+    "subheading": "Tell us about your listing and we'll get back to you within one business day.",
+    "submitButton": "Send Inquiry",
+    "successMessage": "Thanks — we'll be in touch within 1 business day."
+  },
+  "footer": {
+    "tagline": "Professional media.",
+    "taglineBold": "Serious results.",
+    "rights": "All rights reserved."
+  }
+}

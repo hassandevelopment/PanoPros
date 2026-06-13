@@ -22,17 +22,24 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
 
   const currentSrc = hasSlideshow ? images[slideIndex] : image;
 
+  const Wrapper = link ? "a" : "article";
+  const wrapperProps = link
+    ? { href: link.href, target: "_blank" as const, rel: "noopener noreferrer" }
+    : {};
+
   return (
-    <article
+    <Wrapper
+      {...wrapperProps}
       className="service-card group flex flex-col bg-white rounded-xl overflow-hidden"
       style={{
         boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
         transition: "box-shadow 200ms ease-out",
+        cursor: link ? "pointer" : undefined,
       }}
-      onMouseEnter={e => {
+      onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
         (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 16px rgba(0,0,0,0.12)";
       }}
-      onMouseLeave={e => {
+      onMouseLeave={(e: React.MouseEvent<HTMLElement>) => {
         (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.08)";
       }}
     >
@@ -106,19 +113,11 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
           )}
         </p>
         {link && (
-          <a
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-sm font-medium text-ink underline underline-offset-2"
-            style={{ transition: "opacity 150ms ease-out" }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = "0.6")}
-            onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
-          >
+          <span className="mt-4 text-sm font-medium text-ink underline underline-offset-2">
             {link.label} →
-          </a>
+          </span>
         )}
       </div>
-    </article>
+    </Wrapper>
   );
 }

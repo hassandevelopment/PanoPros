@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0E0E10;
+  --color-charcoal: #2A2A2E;
+  --color-bone: #F7F5F0;
+  --color-cream: #EFEAE0;
+  --color-muted: #8A8A8E;
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* ── Hero buttons ── */
+.hero-btn {
+  transition: background-color 150ms ease-out, transform 100ms ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn:hover { background-color: var(--color-bone); }
+}
+.hero-btn:active { transform: scale(0.97); }
+
+/* ── Service card stagger ── */
+.service-grid .service-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 400ms var(--ease-out-expo) forwards;
+}
+.service-grid .service-card:nth-child(1) { animation-delay: 0ms; }
+.service-grid .service-card:nth-child(2) { animation-delay: 60ms; }
+.service-grid .service-card:nth-child(3) { animation-delay: 120ms; }
+.service-grid .service-card:nth-child(4) { animation-delay: 180ms; }
+.service-grid .service-card:nth-child(5) { animation-delay: 240ms; }
+.service-grid .service-card:nth-child(6) { animation-delay: 300ms; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Dev service card stagger ── */
+.dev-service-grid .service-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 400ms var(--ease-out-expo) forwards;
+}
+.dev-service-grid .service-card:nth-child(1) { animation-delay: 0ms; }
+.dev-service-grid .service-card:nth-child(2) { animation-delay: 60ms; }
+.dev-service-grid .service-card:nth-child(3) { animation-delay: 120ms; }
+.dev-service-grid .service-card:nth-child(4) { animation-delay: 180ms; }
+
+/* ── Portfolio grid stagger ── */
+.portfolio-grid .portfolio-item {
+  opacity: 0;
+  animation: fadeIn 350ms ease-out forwards;
+}
+.portfolio-grid .portfolio-item:nth-child(1)  { animation-delay: 0ms; }
+.portfolio-grid .portfolio-item:nth-child(2)  { animation-delay: 40ms; }
+.portfolio-grid .portfolio-item:nth-child(3)  { animation-delay: 80ms; }
+.portfolio-grid .portfolio-item:nth-child(4)  { animation-delay: 120ms; }
+.portfolio-grid .portfolio-item:nth-child(5)  { animation-delay: 160ms; }
+.portfolio-grid .portfolio-item:nth-child(6)  { animation-delay: 200ms; }
+.portfolio-grid .portfolio-item:nth-child(n+7) { animation-delay: 240ms; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 640ms var(--ease-out-expo), transform 640ms var(--ease-out-expo);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .service-grid .service-card,
+  .portfolio-grid .portfolio-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Film grain ── */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  animation: grain 0.5s steps(1) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { background-position: 0 0; }
+  25%       { background-position: -64px 32px; }
+  50%       { background-position: 32px -64px; }
+  75%       { background-position: -32px 64px; }
+}
+
+/* ── Home page entrance choreography ── */
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes word-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-line {
+  transform-origin: center;
+  animation: line-draw 600ms ease-out both;
+}
+
+.home-word-1 {
+  animation: word-enter 500ms ease-out 500ms both;
+}
+
+.home-word-2 {
+  animation: word-enter 500ms ease-out 650ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after { animation: none; }
+  .home-line,
+  .home-word-1,
+  .home-word-2 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

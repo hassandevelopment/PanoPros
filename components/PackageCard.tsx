@@ -34,8 +34,6 @@ const headerStyles: Record<string, { bg: string; pattern: string }> = {
 export default function PackageCard({
   name,
   tagline,
-  price,
-  priceNote,
   features,
   addOns,
   cta,
@@ -73,15 +71,7 @@ export default function PackageCard({
           <p className="text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-2">
             {tagline}
           </p>
-          <div className="flex items-baseline justify-between">
-            <h3 className="text-white text-2xl font-bold tracking-tight">{name}</h3>
-            <div className="text-right">
-              <span className="text-white text-3xl font-bold">{price}</span>
-              {priceNote && (
-                <p className="text-white/40 text-[10px] font-semibold tracking-[0.2em] uppercase mt-0.5">{priceNote}</p>
-              )}
-            </div>
-          </div>
+          <h3 className="text-white text-2xl font-bold tracking-tight">{name}</h3>
         </div>
       </div>
 
@@ -143,7 +133,7 @@ export default function PackageCard({
             else { el.style.backgroundColor = "transparent"; el.style.color = "var(--color-ink)"; }
           }}
         >
-          {cta.label}
+          Request a Quote
         </Link>
       </div>
     </article>

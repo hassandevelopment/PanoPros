@@ -7,8 +7,6 @@ export interface PackageFeature {
 export interface Package {
   name: string;
   tagline: string;
-  price: string;
-  priceNote?: string;
   image: string;
   features: PackageFeature[];
   cta: { label: string; href: string };
@@ -19,27 +17,47 @@ export interface Package {
 export interface DevPackage {
   name: string;
   tagline: string;
-  price: string;
-  priceNote: string;
   image: string;
   features: PackageFeature[];
   cta: { label: string; href: string };
   highlighted?: boolean;
 }
 
+export interface DevAddOn {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export const devAddOns: DevAddOn[] = [
+  {
+    title: "Payment Integration",
+    description: "Accept online payments via Tap, MyFatoorah, or other local Bahraini gateways, integrated directly into your site.",
+    icon: "CreditCard",
+  },
+  {
+    title: "SEO Optimisation",
+    description: "On-page SEO setup: meta tags, structured data, sitemap, Google Search Console, and performance tuning.",
+    icon: "Search",
+  },
+  {
+    title: "Multilingual Support",
+    description: "Add Arabic (RTL) or other languages with a language switcher and full content translation.",
+    icon: "Globe",
+  },
+];
+
 export const devPackages: DevPackage[] = [
   {
     name: "Starter",
-    tagline: "A clean, professional online presence — fast.",
-    price: "250 BD",
-    priceNote: "ONE-TIME",
+    tagline: "A clean, professional online presence. Fast.",
     image: "",
     features: [
       { title: "Single-page professional website", body: "One polished, fully structured page covering everything your business needs." },
       { title: "Fully mobile-responsive design", body: "Looks and works perfectly on every screen size." },
       { title: "Contact form integration", body: "A working form that sends inquiries straight to your inbox." },
       { title: "Basic SEO setup", body: "Google-ready meta tags, sitemap, and structured data." },
-      { title: "Hosting & domain setup support", body: "We guide you through getting live — no technical knowledge required." },
+      { title: "Hosting & domain setup support", body: "We guide you through getting live. No technical knowledge required." },
       { title: "Delivered live in 7 days", body: "" },
       { title: "1 round of revisions included", body: "" },
     ],
@@ -48,11 +66,9 @@ export const devPackages: DevPackage[] = [
   {
     name: "Business",
     tagline: "Built to win customers, not just exist online.",
-    price: "400 BD",
-    priceNote: "ONE-TIME",
     image: "",
     features: [
-      { title: "Multi-section custom website", body: "Hero, Services, Gallery, About, and Contact — all custom-designed to your brand." },
+      { title: "Multi-section custom website", body: "Hero, Services, Gallery, About, and Contact. All custom-designed to your brand." },
       { title: "Custom design matched to your brand", body: "Colours, fonts, and feel aligned with your identity." },
       { title: "Photo optimisation from your content", body: "We process and optimise every image you supply." },
       { title: "Smooth animations & transitions", body: "Subtle motion that makes the site feel modern and considered." },
@@ -68,8 +84,6 @@ export const devPackages: DevPackage[] = [
   {
     name: "Premium",
     tagline: "For businesses ready to compete and grow online.",
-    price: "650 BD",
-    priceNote: "ONE-TIME",
     image: "",
     features: [
       { title: "Everything in the Business package", body: "All Business features included as the baseline." },
@@ -88,8 +102,6 @@ export const devPackages: DevPackage[] = [
 export const carePlan = {
   name: "Care Plan",
   tagline: "Hands-off site management so you can focus on your business.",
-  price: "30 BD",
-  priceNote: "PER MONTH",
   features: [
     "Hosting & uptime monitoring",
     "Content updates",
@@ -104,7 +116,6 @@ export const packages: Package[] = [
   {
     name: "Basic",
     tagline: "For Standard Listings",
-    price: "75 BD",
     image: "/images/packages/basic.jpg",
     features: [
       {
@@ -120,13 +131,12 @@ export const packages: Package[] = [
         body: "Fast turnaround so your listing goes live without delay.",
       },
     ],
-    addOns: ["2D Floor Plan — 20 BD", "Virtual Staging — 40 BD per image"],
+    addOns: ["2D Floor Plan: 20 BD", "Virtual Staging: 40 BD per image"],
     cta: { label: "Book Basic", href: "/contact-us?package=basic" },
   },
   {
     name: "Standard",
     tagline: "Most Popular",
-    price: "120 BD",
     image: "/images/packages/standard.jpg",
     features: [
       {
@@ -142,14 +152,13 @@ export const packages: Package[] = [
         body: "A detailed and accurate floor plan to give potential buyers a clear understanding of the property's layout.",
       },
     ],
-    addOns: ["3 Staged Images Bundle — 40 BD"],
+    addOns: ["3 Staged Images Bundle: 40 BD"],
     cta: { label: "Book Standard", href: "/contact-us?package=standard" },
     highlighted: true,
   },
   {
     name: "Premium Luxury",
     tagline: "The Full Package",
-    price: "220 BD",
     image: "/images/packages/premium.jpg",
     features: [
       {
@@ -179,7 +188,7 @@ export const packages: Package[] = [
       {
         title: "3 Virtual Staging Rooms",
         body: "Transform vacant spaces with virtual staging, allowing buyers to visualise the potential of the property.",
-        addOns: ["Additional Virtual Staging — 10 BD per image"],
+        addOns: ["Additional Virtual Staging: 10 BD per image"],
       },
       {
         title: "Virtual Twilight",

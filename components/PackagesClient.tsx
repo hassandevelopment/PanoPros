@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { packages, devPackages, carePlan } from "@/lib/data/packages";
+import { packages, devPackages, carePlan, devAddOns } from "@/lib/data/packages";
 import type { Package } from "@/lib/data/packages";
+import { CreditCard, Search, Globe } from "lucide-react";
 import PackageCard from "@/components/PackageCard";
 
 const processSteps = [
@@ -101,17 +102,31 @@ export default function PackagesClient() {
                 ))}
               </div>
             </div>
-            <div className="text-left sm:text-right shrink-0">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-ink">{carePlan.price}</span>
-              </div>
-              <p className="text-xs text-muted tracking-widest uppercase">{carePlan.priceNote}</p>
+            <div className="shrink-0">
               <Link
                 href="/contact-us?package=care-plan"
-                className="mt-4 inline-block border border-ink text-ink text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-ink hover:text-bone transition-colors"
+                className="inline-block border border-ink text-ink text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-ink hover:text-bone transition-colors"
               >
-                Add Care Plan
+                Request a Quote
               </Link>
+            </div>
+          </div>
+
+          {/* Add-Ons */}
+          <div className="mt-16">
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3 text-center">Enhance Your Project</p>
+            <h3 className="text-2xl font-bold text-ink text-center mb-10">Optional Add-Ons</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {devAddOns.map(({ title, description, icon }) => {
+                const Icon = icon === "CreditCard" ? CreditCard : icon === "Search" ? Search : Globe;
+                return (
+                  <div key={title} className="rounded-xl border border-cream bg-white p-6" style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}>
+                    <Icon size={20} className="text-ink mb-4" strokeWidth={1.5} />
+                    <h4 className="font-heading text-base font-semibold text-ink mb-2">{title}</h4>
+                    <p className="text-sm text-charcoal leading-relaxed">{description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -120,9 +135,8 @@ export default function PackagesClient() {
             <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Good to Know</p>
             <ul className="space-y-2">
               {[
-                "50% deposit to start, 50% on launch — no surprises",
                 "All packages include domain & hosting setup guidance",
-                "Pricing excludes domain and hosting fees (typically BD 15–25/year)",
+                "Domain and hosting fees are separate (typically BD 15–25/year)",
                 "Custom features outside listed packages are quoted separately",
               ].map((note) => (
                 <li key={note} className="flex items-start gap-2 text-sm text-charcoal">
