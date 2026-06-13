@@ -27,7 +27,7 @@ const navLinks = [
   { label: "Media", href: "/media" },
   { label: "Development", href: "/development" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Pricing", href: "/packages" },
+  { label: "Packages", href: "/packages" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact-us" },
 ];

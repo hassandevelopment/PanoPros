@@ -48,7 +48,7 @@ export default function DevelopmentPage() {
             href="/packages"
             className="inline-block border border-ink text-ink rounded-full px-8 py-3 text-sm font-medium hover:bg-ink hover:text-bone transition-colors"
           >
-            View Pricing
+            View Packages
           </Link>
         </ScrollReveal>
       </div>

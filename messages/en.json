@@ -3,7 +3,7 @@
     "media": "Media",
     "development": "Development",
     "portfolio": "Portfolio",
-    "pricing": "Pricing",
+    "pricing": "Packages",
     "about": "About",
     "contact": "Contact"
   },
@@ -13,7 +13,7 @@
     "getInTouch": "Get in touch",
     "learnMore": "Learn More",
     "viewPortfolio": "See Our Work",
-    "viewPricing": "View Pricing"
+    "viewPricing": "View Packages"
   },
   "home": {
     "hero": {
