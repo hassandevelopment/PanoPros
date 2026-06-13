@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-10">
         {/* Top row: logo on left, contact + social on right */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
-          <div className="text-bone">
+          <a href="/" className="text-bone">
             <LogoLockup size="sm" direction="horizontal" showTagline={false} />
-          </div>
+          </a>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
             <a
