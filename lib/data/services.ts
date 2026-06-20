@@ -28,12 +28,6 @@ export const devServices: Service[] = [
     body: "Single-page sites built for speed, clarity, and a professional first impression.",
   },
   {
-    title: "Brand Identity & Design",
-    image: "/images/services/dev-branding.png",
-    objectPosition: "center",
-    body: "Logo, colours, and typography that make your business look credible from day one.",
-  },
-  {
     title: "Mobile Applications",
     image: "/images/services/mobile-apps.png",
     objectPosition: "center",
