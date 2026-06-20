@@ -38,7 +38,7 @@ export const devServices: Service[] = [
     image: "/images/services/mobile-apps.png",
     objectPosition: "center",
     objectFit: "contain",
-    imageBackground: "#E8E4DC",
+    imageBackground: "#0E0E10",
     body: "Custom iOS and Android apps built for your business workflow.",
   },
   {
