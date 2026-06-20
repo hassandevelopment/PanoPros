@@ -52,7 +52,7 @@ export const devServices: Service[] = [
 export const services: Service[] = [
   {
     title: "Photography",
-    image: "/images/portfolio/1.1.webp",
+    image: "/images/services/photography.jpg",
     objectPosition: "center",
     body: "Professional photos that make your listing stand out and attract serious buyers.",
   },
