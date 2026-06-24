@@ -131,7 +131,7 @@ export const packages: Package[] = [
         body: "Fast turnaround so your listing goes live without delay.",
       },
     ],
-    addOns: ["2D Floor Plan: 20 BD", "Virtual Staging: 40 BD per image"],
+    addOns: ["2D Floor Plan", "Virtual Staging"],
     cta: { label: "Book Basic", href: "/contact-us?package=basic" },
   },
   {
@@ -152,7 +152,7 @@ export const packages: Package[] = [
         body: "A detailed and accurate floor plan to give potential buyers a clear understanding of the property's layout.",
       },
     ],
-    addOns: ["3 Staged Images Bundle: 40 BD"],
+    addOns: ["3 Staged Images Bundle"],
     cta: { label: "Book Standard", href: "/contact-us?package=standard" },
     highlighted: true,
   },
@@ -188,7 +188,7 @@ export const packages: Package[] = [
       {
         title: "3 Virtual Staging Rooms",
         body: "Transform vacant spaces with virtual staging, allowing buyers to visualise the potential of the property.",
-        addOns: ["Additional Virtual Staging: 10 BD per image"],
+        addOns: ["Additional Virtual Staging available"],
       },
       {
         title: "Virtual Twilight",
