@@ -30,8 +30,8 @@ export default function MediaPage() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-20 md:pb-28">
         <ScrollReveal>
           <div className="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+            {services.map((service, i) => (
+              <ServiceCard key={service.title} {...service} priority={i < 3} />
             ))}
           </div>
         </ScrollReveal>

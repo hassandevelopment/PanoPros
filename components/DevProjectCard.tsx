@@ -9,7 +9,7 @@ const cardGradients = [
   "linear-gradient(135deg, #111 0%, #2a2a2e 100%)",
 ];
 
-export default function DevProjectCard({ title, client, description, href, screenshot }: DevProject) {
+export default function DevProjectCard({ title, client, description, href, screenshot, blurDataURL, priority }: DevProject & { priority?: boolean }) {
   const gradient = cardGradients[title.length % cardGradients.length];
 
   return (
@@ -28,6 +28,9 @@ export default function DevProjectCard({ title, client, description, href, scree
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover object-top"
+            priority={priority}
+            placeholder={blurDataURL ? "blur" : "empty"}
+            blurDataURL={blurDataURL}
             style={{ transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)" }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}

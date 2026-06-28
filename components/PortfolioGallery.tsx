@@ -57,8 +57,8 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
       {/* Development projects */}
       {active === "Development" && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {devProjects.map((project) => (
-            <DevProjectCard key={project.title} {...project} />
+          {devProjects.map((project, i) => (
+            <DevProjectCard key={project.title} {...project} priority={i < 3} />
           ))}
         </div>
       )}
