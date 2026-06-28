@@ -8,7 +8,6 @@ export interface Package {
   name: string;
   tagline: string;
   image: string;
-  blurDataURL?: string;
   features: PackageFeature[];
   cta: { label: string; href: string };
   highlighted?: boolean;
@@ -117,8 +116,7 @@ export const packages: Package[] = [
   {
     name: "Basic",
     tagline: "For Standard Listings",
-    image: "/images/packages/basic.webp",
-    blurDataURL: "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACwAQCdASoIAAUAB0CWJZwAAubtIB+gAP6uwJgxLoGlCAAA",
+    image: "/images/packages/basic.jpg",
     features: [
       {
         title: "Professional HDR Photography",
@@ -139,8 +137,7 @@ export const packages: Package[] = [
   {
     name: "Standard",
     tagline: "Most Popular",
-    image: "/images/packages/standard.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAABwAQCdASoIAAUAB0CWJQBOgB5AwADxQ6ueMfnBJ3JD6rjGKwAAAA==",
+    image: "/images/packages/standard.jpg",
     features: [
       {
         title: "HDR Photos",
@@ -162,8 +159,7 @@ export const packages: Package[] = [
   {
     name: "Premium Luxury",
     tagline: "The Full Package",
-    image: "/images/packages/premium.webp",
-    blurDataURL: "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAACQAQCdASoIAAUAB0CWJZwAAty9/oAA+prz6cIrnqegAAAA",
+    image: "/images/packages/premium.jpg",
     features: [
       {
         title: "HDR Photos",

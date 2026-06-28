@@ -5,20 +5,9 @@ import { useEffect, useState } from "react";
 import { parseInlineBold } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 
-export default function ServiceCard({
-  title,
-  image,
-  images,
-  objectPosition = "center",
-  objectFit = "cover",
-  imageBackground,
-  body,
-  link,
-  unoptimized,
-  blurDataURL,
-  priority,
-}: Service & { priority?: boolean }) {
+export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link }: Service) {
   const parts = parseInlineBold(body);
+  const isGif = image.endsWith(".gif");
   const hasSlideshow = images && images.length > 1;
 
   const [slideIndex, setSlideIndex] = useState(0);
@@ -65,7 +54,6 @@ export default function ServiceCard({
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
-                priority={priority && i === 0}
                 style={{
                   objectPosition,
                   position: "absolute",
@@ -97,20 +85,17 @@ export default function ServiceCard({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={objectFit === "contain" ? "object-contain" : "object-cover"}
-            priority={priority}
-            placeholder={blurDataURL ? "blur" : "empty"}
-            blurDataURL={blurDataURL}
-            unoptimized={unoptimized}
             style={{
               objectPosition,
-              transition: unoptimized ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
+              transition: isGif ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
             }}
             onMouseEnter={e => {
-              if (!unoptimized) (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
+              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
             }}
             onMouseLeave={e => {
-              if (!unoptimized) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
+            unoptimized={isGif || image.endsWith(".svg")}
           />
         )}
       </div>

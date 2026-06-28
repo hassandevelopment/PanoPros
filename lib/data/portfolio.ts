@@ -12,7 +12,6 @@ export interface DevProject {
   description: string;
   href: string;
   screenshot?: string;
-  blurDataURL?: string;
   category: "Development";
 }
 
@@ -24,8 +23,7 @@ export const devProjects: DevProject[] = [
     client: "Architecture & Interior Design · Bahrain",
     description: "A refined portfolio site for an architecture and interior design studio — built to showcase projects and attract discerning clients.",
     href: "https://hassandevelopment.github.io/PAD/index.html",
-    screenshot: "/images/dev/screenshots/pad.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAABwAQCdASoJAAUAB0CWJYwAAkq9uAD+sBrgc+H+XXremNd1bAA=",
+    screenshot: "/images/dev/screenshots/pad.png",
     category: "Development",
   },
   {
@@ -33,8 +31,7 @@ export const devProjects: DevProject[] = [
     client: "Premium Car Care · Bahrain",
     description: "High-end auto detailing, ceramic coatings, and PPF — a premium site built to attract serious car enthusiasts.",
     href: "https://hassandevelopment.github.io/CAS-Premium/",
-    screenshot: "/images/dev/screenshots/cas-premium.webp",
-    blurDataURL: "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAwAQCdASoJAAUAB0CWJaQAA3AA/u3WnWCyvTNieggAAA==",
+    screenshot: "/images/dev/screenshots/cas-premium.png",
     category: "Development",
   },
   {
@@ -42,8 +39,7 @@ export const devProjects: DevProject[] = [
     client: "Hair, Nails & Café · Barbar, Bahrain",
     description: "Full-service salon with an in-house café — hair colour, treatments, manicures, and pedicures in Barbar, Bahrain.",
     href: "https://hassandevelopment.github.io/Melo-Beauty-Lounge/",
-    screenshot: "/images/dev/screenshots/melo-beauty-lounge.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoJAAUAB0CWJQBOgBt9dG8AAP7e+hmHbVRKMoPsuhL+0L8rVAA=",
+    screenshot: "/images/dev/screenshots/melo-beauty-lounge.png",
     category: "Development",
   },
   {
@@ -51,8 +47,7 @@ export const devProjects: DevProject[] = [
     client: "Wellness & Beauty · Bahrain",
     description: "A serene, conversion-focused site for a premium wellness brand — designed to attract and book clients effortlessly.",
     href: "https://hassandevelopment.github.io/Calma/",
-    screenshot: "/images/dev/screenshots/calma.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoJAAUAB0CWJQBYdiLs3pUAgAD+3rZuB61UQLSpGCrKAAAA",
+    screenshot: "/images/dev/screenshots/calma.png",
     category: "Development",
   },
   {
@@ -60,8 +55,7 @@ export const devProjects: DevProject[] = [
     client: "Italian Restaurant · Bahrain",
     description: "Authentic wood-fired Italian dining — a full-service restaurant site built to drive reservations.",
     href: "https://hassandevelopment.github.io/gusto-web/",
-    screenshot: "/images/dev/screenshots/gusto-pizzeria-ristorante.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACQAQCdASoJAAUAB0CWJZwAAvhO5wAA/IxVL3o0s1h45HkAAAA=",
+    screenshot: "/images/dev/screenshots/gusto-pizzeria-ristorante.png",
     category: "Development",
   },
   {
@@ -69,8 +63,7 @@ export const devProjects: DevProject[] = [
     client: "Auto Detailing · Salmabad, Bahrain",
     description: "Workshop-grade detailing — ceramic coatings, PPF, wrapping, and paint correction built for Gulf conditions.",
     href: "https://hassandevelopment.github.io/Custom-Touch-Car-Care/",
-    screenshot: "/images/dev/screenshots/custom-touch-car-care.webp",
-    blurDataURL: "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACQAQCdASoJAAUAB0CWJZQAAp0JGAAA/uOEplmg7vp9i8OAAAA=",
+    screenshot: "/images/dev/screenshots/custom-touch-car-care.png",
     category: "Development",
   },
   {
@@ -78,8 +71,7 @@ export const devProjects: DevProject[] = [
     client: "Car Detailing · Hidd, Bahrain",
     description: "Premium mobile car detailing with a spa-quality finish — comes to you anywhere in Bahrain.",
     href: "https://hassandevelopment.github.io/3D-Car-Spa/",
-    screenshot: "/images/dev/screenshots/3d-car-spa.webp",
-    blurDataURL: "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoJAAUAB0CWJaQAA3AA/u6V4gS+lkoAAAA=",
+    screenshot: "/images/dev/screenshots/3d-car-spa.png",
     category: "Development",
   },
 ];
