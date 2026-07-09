@@ -116,7 +116,7 @@ export const packages: Package[] = [
   {
     name: "Basic",
     tagline: "For Standard Listings",
-    image: "/images/packages/basic.jpg",
+    image: "/images/packages/basic.webp",
     features: [
       {
         title: "Professional HDR Photography",
@@ -137,7 +137,7 @@ export const packages: Package[] = [
   {
     name: "Standard",
     tagline: "Most Popular",
-    image: "/images/packages/standard.jpg",
+    image: "/images/packages/standard.webp",
     features: [
       {
         title: "HDR Photos",
@@ -159,7 +159,7 @@ export const packages: Package[] = [
   {
     name: "Premium Luxury",
     tagline: "The Full Package",
-    image: "/images/packages/premium.jpg",
+    image: "/images/packages/premium.webp",
     features: [
       {
         title: "HDR Photos",

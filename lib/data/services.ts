@@ -13,18 +13,18 @@ export interface Service {
 export const devServices: Service[] = [
   {
     title: "Business Websites",
-    image: "/images/services/dev-landing.png",
+    image: "/images/services/dev-landing.webp",
     objectPosition: "center",
     body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
     priority: true,
   },
   {
     title: "Landing Pages",
-    image: "/images/services/dev-websites-1.jpg",
+    image: "/images/services/dev-websites-1.webp",
     images: [
-      "/images/services/dev-websites-1.jpg",
-      "/images/services/dev-websites-2.jpg",
-      "/images/services/dev-websites-3.jpg",
+      "/images/services/dev-websites-1.webp",
+      "/images/services/dev-websites-2.webp",
+      "/images/services/dev-websites-3.webp",
     ],
     objectPosition: "center",
     body: "Single-page sites built for speed, clarity, and a professional first impression.",
@@ -32,7 +32,7 @@ export const devServices: Service[] = [
   },
   {
     title: "Mobile Applications",
-    image: "/images/services/mobile-apps.png",
+    image: "/images/services/mobile-apps.webp",
     objectPosition: "center",
     objectFit: "contain",
     imageBackground: "#0E0E10",
@@ -55,7 +55,7 @@ export const devServices: Service[] = [
 export const services: Service[] = [
   {
     title: "Photography",
-    image: "/images/services/photography.jpg",
+    image: "/images/services/photography.webp",
     objectPosition: "center",
     body: "Professional photos that make your listing stand out and attract serious buyers.",
     priority: true,
@@ -73,25 +73,25 @@ export const services: Service[] = [
   },
   {
     title: "Virtual Staging",
-    image: "/images/services/virtual-staging.jpg",
+    image: "/images/services/virtual-staging.webp",
     objectPosition: "center",
     body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
   },
   {
     title: "Twilight Shoot",
-    image: "/images/services/twilight.jpg",
+    image: "/images/services/twilight.webp",
     objectPosition: "center",
     body: "Evening light makes your property look its best and stops the scroll.",
   },
   {
     title: "3D Floor Plans",
-    image: "/images/services/3d-floor-plan.png",
+    image: "/images/services/3d-floor-plan.webp",
     objectPosition: "top",
     body: "Give buyers an immersive, three-dimensional view of your property layout.",
   },
   {
     title: "2D Floor Plans",
-    image: "/images/services/2d-floor-plan.png",
+    image: "/images/services/2d-floor-plan.webp",
     objectPosition: "top",
     body: "A clean, accurate floor plan so buyers instantly understand the space.",
   },

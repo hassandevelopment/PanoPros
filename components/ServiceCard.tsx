@@ -88,6 +88,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             loop
             muted
             playsInline
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition }}
           />
