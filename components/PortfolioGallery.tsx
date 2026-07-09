@@ -65,7 +65,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
 
       {/* Media photo grid */}
       {active === "Media" && (
-        <div className="portfolio-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div className="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {portfolioImages.map((img, i) => (
             <button
               key={img.src}
