@@ -7,6 +7,7 @@ import type { Service } from "@/lib/data/services";
 
 export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link }: Service) {
   const parts = parseInlineBold(body);
+  const isVideo = image.endsWith(".mp4");
   const isGif = image.endsWith(".gif");
   const hasSlideshow = images && images.length > 1;
 
@@ -78,6 +79,16 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
               ))}
             </div>
           </>
+        ) : isVideo ? (
+          <video
+            src={currentSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition }}
+          />
         ) : (
           <Image
             src={currentSrc}
@@ -87,15 +98,15 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             className={objectFit === "contain" ? "object-contain" : "object-cover"}
             style={{
               objectPosition,
-              transition: isGif ? "none" : "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
+              transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)",
             }}
             onMouseEnter={e => {
-              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
             }}
             onMouseLeave={e => {
-              if (!isGif) (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
-            unoptimized={isGif || image.endsWith(".svg")}
+            unoptimized={image.endsWith(".svg")}
           />
         )}
       </div>

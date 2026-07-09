@@ -58,7 +58,7 @@ export const services: Service[] = [
   },
   {
     title: "Matterport Virtual Tours",
-    image: "/images/services/virtual-tour.gif",
+    image: "/images/services/virtual-tour.mp4",
     objectPosition: "center",
     body: "Let buyers walk through your property online, from anywhere, at any time.",
     link: {
@@ -68,13 +68,13 @@ export const services: Service[] = [
   },
   {
     title: "Virtual Staging",
-    image: "/images/services/virtual-staging.gif",
+    image: "/images/services/virtual-staging.mp4",
     objectPosition: "center",
     body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
   },
   {
     title: "Twilight Shoot",
-    image: "/images/services/twilight.png",
+    image: "/images/services/twilight.jpg",
     objectPosition: "center",
     body: "Evening light makes your property look its best and stops the scroll.",
   },
