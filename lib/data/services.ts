@@ -68,7 +68,7 @@ export const services: Service[] = [
   },
   {
     title: "Virtual Staging",
-    image: "/images/services/virtual-staging.mp4",
+    image: "/images/services/virtual-staging.jpg",
     objectPosition: "center",
     body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
   },

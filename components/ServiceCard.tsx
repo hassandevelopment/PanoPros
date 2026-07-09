@@ -51,10 +51,11 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
               <Image
                 key={src}
                 src={src}
-                alt={`${title} — slide ${i + 1}`}
+                alt={`${title} - slide ${i + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
+                unoptimized
                 style={{
                   objectPosition,
                   position: "absolute",
@@ -106,7 +107,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
-            unoptimized={image.endsWith(".svg")}
+            unoptimized
           />
         )}
       </div>

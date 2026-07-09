@@ -82,6 +82,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
                 style={{ transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+                unoptimized
               />
               <div
                 className="absolute inset-0 pointer-events-none"
