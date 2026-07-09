@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { parseInlineBold } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 
-export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link }: Service) {
+export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link, priority }: Service) {
   const parts = parseInlineBold(body);
   const isVideo = image.endsWith(".mp4");
   const isGif = image.endsWith(".gif");
@@ -56,7 +56,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
                 unoptimized
-                loading="eager"
+                {...(priority && { priority: true })}
                 style={{
                   objectPosition,
                   position: "absolute",
@@ -109,7 +109,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
               (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
             unoptimized
-            loading="eager"
+            {...(priority && { priority: true })}
           />
         )}
       </div>

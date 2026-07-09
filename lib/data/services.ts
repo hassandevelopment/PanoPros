@@ -7,6 +7,7 @@ export interface Service {
   imageBackground?: string;
   body: string;
   link?: { label: string; href: string };
+  priority?: boolean;
 }
 
 export const devServices: Service[] = [
@@ -15,6 +16,7 @@ export const devServices: Service[] = [
     image: "/images/services/dev-landing.png",
     objectPosition: "center",
     body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
+    priority: true,
   },
   {
     title: "Landing Pages",
@@ -26,6 +28,7 @@ export const devServices: Service[] = [
     ],
     objectPosition: "center",
     body: "Single-page sites built for speed, clarity, and a professional first impression.",
+    priority: true,
   },
   {
     title: "Mobile Applications",
@@ -55,12 +58,14 @@ export const services: Service[] = [
     image: "/images/services/photography.jpg",
     objectPosition: "center",
     body: "Professional photos that make your listing stand out and attract serious buyers.",
+    priority: true,
   },
   {
     title: "Matterport Virtual Tours",
     image: "/images/services/virtual-tour.mp4",
     objectPosition: "center",
     body: "Let buyers walk through your property online, from anywhere, at any time.",
+    priority: true,
     link: {
       label: "Click here to see an example",
       href: "https://my.matterport.com/show/?m=YGXvNG1vJyB",
