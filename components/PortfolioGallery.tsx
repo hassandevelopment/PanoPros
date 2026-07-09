@@ -83,6 +83,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
                 unoptimized
+                loading="eager"
               />
               <div
                 className="absolute inset-0 pointer-events-none"

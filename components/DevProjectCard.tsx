@@ -32,6 +32,7 @@ export default function DevProjectCard({ title, client, description, href, scree
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
             unoptimized
+            loading="eager"
           />
           <div className="absolute bottom-0 inset-x-0 px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
             <p className="text-white/60 text-xs font-medium tracking-[0.18em] uppercase mb-0.5">{client}</p>

@@ -56,6 +56,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
                 unoptimized
+                loading="eager"
                 style={{
                   objectPosition,
                   position: "absolute",
@@ -108,6 +109,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
               (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
             unoptimized
+            loading="eager"
           />
         )}
       </div>
