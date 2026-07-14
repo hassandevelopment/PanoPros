@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+
+// The lightbox JS only loads on the first image click, not with the page.
+const Lightbox = dynamic(() => import("yet-another-react-lightbox"), { ssr: false });
 import { portfolioCategories, portfolioImages, devProjects } from "@/lib/data/portfolio";
 import { blurData } from "@/lib/data/blur-data";
 import { versioned } from "@/lib/utils";
@@ -20,6 +23,8 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
 
   const [active, setActive] = useState<PortfolioCategory>(resolved);
   const [index, setIndex] = useState(-1);
+  // Mount (and download) the lightbox only after the first image is opened.
+  const [lightboxReady, setLightboxReady] = useState(false);
 
   const slides = portfolioImages.map((img) => ({ src: versioned(img.src), alt: img.alt }));
 
@@ -73,7 +78,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
               key={img.src}
               className="portfolio-item relative w-full overflow-hidden rounded-xl cursor-zoom-in block aspect-[4/3]"
               style={{ backgroundColor: '#e8e4de' }}
-              onClick={() => setIndex(i)}
+              onClick={() => { setLightboxReady(true); setIndex(i); }}
               aria-label={`View: ${img.alt}`}
             >
               <Image
@@ -110,13 +115,15 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
         </Link>
       </div>
 
-      <Lightbox
-        open={index >= 0}
-        close={() => setIndex(-1)}
-        index={index}
-        slides={slides}
-        on={{ view: ({ index: i }) => setIndex(i) }}
-      />
+      {lightboxReady && (
+        <Lightbox
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          index={index}
+          slides={slides}
+          on={{ view: ({ index: i }) => setIndex(i) }}
+        />
+      )}
     </>
   );
 }

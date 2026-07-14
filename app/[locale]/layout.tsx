@@ -8,8 +8,10 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// latin only — the site has no latin-ext characters; dropping the subset
+// removes a preloaded font file from every page.
 const playfair = Playfair_Display({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-playfair",
 });

@@ -2,7 +2,7 @@
 // `Cache-Control: immutable` (1yr), so a replaced file at the same URL keeps
 // serving stale from browser/CDN cache. Appending ?v=ASSET_VERSION changes the
 // URL and forces a fresh fetch.
-export const ASSET_VERSION = "20260714";
+export const ASSET_VERSION = "20260714b";
 
 /** Append the asset version to a local /images src to bust the immutable cache. */
 export function versioned(src: string): string {

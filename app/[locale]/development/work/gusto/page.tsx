@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import LazyVideo from "@/components/LazyVideo";
 
 export const metadata = {
   title: "Gusto — service marketplace app",
@@ -58,12 +59,10 @@ export default function GustoCaseStudy() {
       {/* Hero video — looped teaser */}
       <section className="bg-ink">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pb-16 md:pb-24">
-          <video
+          <LazyVideo
             src="/videos/gusto-teaser.mp4"
+            poster="/images/dev/gusto-teaser-poster.webp"
             autoPlay
-            loop
-            muted
-            playsInline
             className="w-full max-w-3xl mx-auto aspect-[9/16] object-cover bg-charcoal"
             aria-label="Gusto app demo — looped preview"
           />
@@ -119,10 +118,9 @@ export default function GustoCaseStudy() {
           >
             See it in action
           </h2>
-          <video
+          <LazyVideo
             src="/videos/gusto-full.mp4"
             controls
-            playsInline
             poster="/images/dev/gusto-screen.webp"
             className="w-full aspect-video object-contain bg-ink"
             aria-label="Gusto app — full product demo"
