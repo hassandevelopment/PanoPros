@@ -2,10 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { DevProject } from "@/lib/data/portfolio";
 import { blurData } from "@/lib/data/blur-data";
-
-// Bump when a screenshot file is replaced — forces browsers/CDN past the
-// `immutable` cache on /images/* so the new file is actually fetched.
-const ASSET_VERSION = "20260714";
+import { versioned } from "@/lib/utils";
 
 const cardGradients = [
   "linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%)",
@@ -28,7 +25,7 @@ export default function DevProjectCard({ title, client, description, href, scree
       {screenshot ? (
         <div className="relative aspect-[16/9] overflow-hidden" style={{ backgroundColor: '#e8e4de' }}>
           <Image
-            src={`${screenshot}?v=${ASSET_VERSION}`}
+            src={versioned(screenshot)}
             alt={`${title} website screenshot`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

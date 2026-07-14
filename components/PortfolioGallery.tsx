@@ -7,6 +7,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { portfolioCategories, portfolioImages, devProjects } from "@/lib/data/portfolio";
 import { blurData } from "@/lib/data/blur-data";
+import { versioned } from "@/lib/utils";
 import type { PortfolioCategory } from "@/lib/data/portfolio";
 import DevProjectCard from "./DevProjectCard";
 
@@ -20,7 +21,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
   const [active, setActive] = useState<PortfolioCategory>(resolved);
   const [index, setIndex] = useState(-1);
 
-  const slides = portfolioImages.map((img) => ({ src: img.src, alt: img.alt }));
+  const slides = portfolioImages.map((img) => ({ src: versioned(img.src), alt: img.alt }));
 
   return (
     <>
@@ -76,7 +77,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
               aria-label={`View: ${img.alt}`}
             >
               <Image
-                src={img.src}
+                src={versioned(img.src)}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

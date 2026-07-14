@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { parseInlineBold } from "@/lib/utils";
+import { parseInlineBold, versioned } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 import { blurData } from "@/lib/data/blur-data";
 
@@ -51,7 +51,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             {images.map((src, i) => (
               <Image
                 key={src}
-                src={src}
+                src={versioned(src)}
                 alt={`${title} - slide ${i + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -86,7 +86,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
           </>
         ) : isVideo ? (
           <video
-            src={currentSrc}
+            src={versioned(currentSrc)}
             autoPlay
             loop
             muted
@@ -97,7 +97,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
           />
         ) : (
           <Image
-            src={currentSrc}
+            src={versioned(currentSrc)}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
