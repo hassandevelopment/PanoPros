@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { parseInlineBold, versioned } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 import { blurData } from "@/lib/data/blur-data";
@@ -24,6 +24,28 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
 
   const currentSrc = hasSlideshow ? images[slideIndex] : image;
 
+  // Defer the (heavy) autoplay video until the card is near the viewport, so its
+  // download never competes with critical resources / other images on load.
+  // Until then the poster image shows instantly.
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const [loadVideo, setLoadVideo] = useState(false);
+  useEffect(() => {
+    if (!isVideo) return;
+    const el = mediaRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setLoadVideo(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [isVideo]);
+
   const Wrapper = link ? "a" : "article";
   const wrapperProps = link
     ? { href: link.href, target: "_blank" as const, rel: "noopener noreferrer" }
@@ -45,7 +67,7 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
         (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.08)";
       }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden" style={{ backgroundColor: imageBackground ?? '#e8e4de' }}>
+      <div ref={mediaRef} className="relative aspect-[4/3] overflow-hidden" style={{ backgroundColor: imageBackground ?? '#e8e4de' }}>
         {hasSlideshow ? (
           <>
             {images.map((src, i) => (
@@ -85,17 +107,31 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
             </div>
           </>
         ) : isVideo ? (
-          <video
-            src={versioned(currentSrc)}
-            {...(poster && { poster: versioned(poster) })}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition }}
-          />
+          <>
+            {/* Poster shows instantly; the video only downloads once near view. */}
+            {poster && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={versioned(poster)}
+                alt={title}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition }}
+              />
+            )}
+            {loadVideo && (
+              <video
+                src={versioned(currentSrc)}
+                {...(poster && { poster: versioned(poster) })}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition }}
+              />
+            )}
+          </>
         ) : (
           <Image
             src={versioned(currentSrc)}
