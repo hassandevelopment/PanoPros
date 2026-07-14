@@ -44,3 +44,4 @@ next-env.d.ts
 image-sources/
 public/images/backup/
 public/images/originals/
+public/videos/
