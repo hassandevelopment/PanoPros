@@ -6,7 +6,7 @@ import { parseInlineBold, versioned } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 import { blurData } from "@/lib/data/blur-data";
 
-export default function ServiceCard({ title, image, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link, priority }: Service) {
+export default function ServiceCard({ title, image, poster, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link, priority }: Service) {
   const parts = parseInlineBold(body);
   const isVideo = image.endsWith(".mp4");
   const isGif = image.endsWith(".gif");
@@ -87,6 +87,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
         ) : isVideo ? (
           <video
             src={versioned(currentSrc)}
+            {...(poster && { poster: versioned(poster) })}
             autoPlay
             loop
             muted

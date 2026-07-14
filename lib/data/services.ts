@@ -1,6 +1,7 @@
 export interface Service {
   title: string;
   image: string;
+  poster?: string;
   images?: string[];
   objectPosition?: string;
   objectFit?: "cover" | "contain";
@@ -63,6 +64,7 @@ export const services: Service[] = [
   {
     title: "Matterport Virtual Tours",
     image: "/images/services/virtual-tour.mp4",
+    poster: "/images/services/virtual-tour-poster.webp",
     objectPosition: "center",
     body: "Let buyers walk through your property online, from anywhere, at any time.",
     priority: true,
