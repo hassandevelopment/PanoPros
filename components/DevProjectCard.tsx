@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { DevProject } from "@/lib/data/portfolio";
+import { blurData } from "@/lib/data/blur-data";
 
 const cardGradients = [
   "linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%)",
@@ -32,6 +33,8 @@ export default function DevProjectCard({ title, client, description, href, scree
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
             {...(priority && { priority: true })}
+            placeholder="blur"
+            blurDataURL={blurData[screenshot] ?? undefined}
           />
           <div className="absolute bottom-0 inset-x-0 px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
             <p className="text-white/60 text-xs font-medium tracking-[0.18em] uppercase mb-0.5">{client}</p>

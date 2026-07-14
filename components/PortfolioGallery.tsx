@@ -6,6 +6,7 @@ import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { portfolioCategories, portfolioImages, devProjects } from "@/lib/data/portfolio";
+import { blurData } from "@/lib/data/blur-data";
 import type { PortfolioCategory } from "@/lib/data/portfolio";
 import DevProjectCard from "./DevProjectCard";
 
@@ -84,6 +85,8 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
                 priority={i < 3}
+                placeholder="blur"
+                blurDataURL={blurData[img.src] ?? undefined}
               />
               <div
                 className="absolute inset-0 pointer-events-none"
