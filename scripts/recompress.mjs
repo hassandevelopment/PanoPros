@@ -39,8 +39,8 @@ for (const { name, abs } of allFiles) {
   const width = meta.width ?? 9999;
 
   await img
-    .resize(width > 1200 ? 1200 : undefined)
-    .webp({ quality: 55 })
+    .resize(width > 800 ? 800 : undefined)
+    .webp({ quality: 40 })
     .toFile(abs + ".tmp");
 
   const { rename } = await import("fs/promises");
