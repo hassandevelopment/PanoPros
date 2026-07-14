@@ -44,7 +44,7 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
         (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.08)";
       }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden" style={imageBackground ? { backgroundColor: imageBackground } : undefined}>
+      <div className="relative aspect-[4/3] overflow-hidden" style={{ backgroundColor: imageBackground ?? '#e8e4de' }}>
         {hasSlideshow ? (
           <>
             {images.map((src, i) => (
@@ -55,7 +55,6 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
-                unoptimized
                 {...(priority && { priority: true })}
                 style={{
                   objectPosition,
@@ -109,7 +108,6 @@ export default function ServiceCard({ title, image, images, objectPosition = "ce
             onMouseLeave={e => {
               (e.currentTarget as HTMLElement).style.transform = "scale(1)";
             }}
-            unoptimized
             {...(priority && { priority: true })}
           />
         )}

@@ -70,6 +70,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
             <button
               key={img.src}
               className="portfolio-item relative w-full overflow-hidden rounded-xl cursor-zoom-in block aspect-[4/3]"
+              style={{ backgroundColor: '#e8e4de' }}
               onClick={() => setIndex(i)}
               aria-label={`View: ${img.alt}`}
             >
@@ -82,7 +83,6 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
                 style={{ transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
-                unoptimized
                 priority={i < 3}
               />
               <div

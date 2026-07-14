@@ -21,7 +21,7 @@ export default function DevProjectCard({ title, client, description, href, scree
     >
       {/* Header — screenshot if available, gradient fallback */}
       {screenshot ? (
-        <div className="relative aspect-[16/9] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden" style={{ backgroundColor: '#e8e4de' }}>
           <Image
             src={screenshot}
             alt={`${title} website screenshot`}
@@ -31,7 +31,6 @@ export default function DevProjectCard({ title, client, description, href, scree
             style={{ transition: "transform 400ms cubic-bezier(0.25, 0, 0, 1)" }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
-            unoptimized
             {...(priority && { priority: true })}
           />
           <div className="absolute bottom-0 inset-x-0 px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
