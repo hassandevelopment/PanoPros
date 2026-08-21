@@ -34,7 +34,6 @@ export const metadata: Metadata = {
   authors: [{ name: "PanoPros" }],
   creator: "PanoPros",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://panopros.bh" },
   openGraph: {
     title: "PanoPros — Media & Development in Bahrain",
     description:

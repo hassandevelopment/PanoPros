@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.panopros.bh";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://panopros.bh";
   const now = new Date();
   return [
     { url: base, lastModified: now, priority: 1 },

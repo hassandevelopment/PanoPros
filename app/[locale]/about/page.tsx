@@ -3,9 +3,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: {
+    absolute: "About PanoPros — Media & Development Studio in Manama",
+  },
   description:
     "Founded by Hassan Alnajjar, PanoPros delivers real estate photography and custom web development that helps Bahraini businesses win online.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
