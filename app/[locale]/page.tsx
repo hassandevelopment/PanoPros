@@ -13,15 +13,24 @@ export default function HomePage() {
   return (
     <section
       aria-label="Choose a craft: Media or Development"
-      className="grain relative min-h-[100dvh] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12"
+      className="grain relative min-h-[100dvh] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12 pt-24 md:pt-28"
     >
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center">
 
-        {/* The page's semantic anchor. Deliberately small and quiet — the
-            Media / Development split below stays the visual centrepiece. */}
-        <h1 className="home-word-1 max-w-xl text-center text-[11px] sm:text-xs font-medium tracking-[0.24em] uppercase text-ink/55 mb-8 md:mb-10">
-          Photography, Virtual Tours &amp; Web Development in Bahrain
-        </h1>
+        {/* Intro: title and subtitle read as one block. Set well below the
+            scale of the Media / Development split, which stays the centrepiece. */}
+        <div className="home-word-1 max-w-2xl text-center mb-12 md:mb-16">
+          <h1
+            className="text-2xl md:text-3xl font-medium tracking-[-0.01em] leading-snug text-ink text-balance"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Photography, Virtual Tours &amp; Web Development in Bahrain
+          </h1>
+          <p className="mt-4 max-w-lg mx-auto text-sm md:text-base text-ink/60 leading-relaxed">
+            A media and development studio in Bahrain. We create photography,
+            virtual tours, websites, and apps that help businesses stand out.
+          </p>
+        </div>
 
         {/* Accent line */}
         <div className="home-line w-full max-w-md h-px bg-ink/20 mb-12 md:mb-16" />
@@ -59,11 +68,6 @@ export default function HomePage() {
           </div>
 
         </div>
-
-        <p className="home-word-2 mt-12 md:mt-20 max-w-lg text-center text-sm md:text-base text-ink/60 leading-relaxed">
-          A media and development studio in Bahrain. We create photography,
-          virtual tours, websites, and apps that help businesses stand out.
-        </p>
       </div>
     </section>
   );
