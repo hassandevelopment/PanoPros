@@ -27,8 +27,8 @@ export default function HomePage() {
             Photography, Virtual Tours &amp; Web Development in Bahrain
           </h1>
           <p className="mt-4 max-w-lg mx-auto text-sm md:text-base text-ink/60 leading-relaxed">
-            A media and development studio in Bahrain. We create photography,
-            virtual tours, websites, and apps that help businesses stand out.
+            A media and development studio in Bahrain, helping businesses stand
+            out with photography, virtual tours, websites, and apps.
           </p>
         </div>
 
