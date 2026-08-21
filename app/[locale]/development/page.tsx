@@ -1,12 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { devServices } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export const metadata = {
-  title: "Development",
+export const metadata: Metadata = {
+  title: {
+    absolute: "Web & Mobile App Development in Bahrain | PanoPros",
+  },
   description:
     "Custom websites, landing pages, mobile apps, and brand identity for Bahraini businesses. Fast, modern, bilingual-ready.",
+  alternates: { canonical: "/development" },
 };
 
 export default function DevelopmentPage() {

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: {
+    absolute: "Contact PanoPros — Photography & Web Development in Bahrain",
+  },
   description:
     "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
+  alternates: { canonical: "/contact-us" },
 };
 
 export default function ContactPage() {

@@ -1,12 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export const metadata = {
-  title: "Media",
+export const metadata: Metadata = {
+  title: {
+    absolute: "Real Estate Photography & Videography in Bahrain | PanoPros",
+  },
   description:
     "Real estate photography, cinematic video, Matterport virtual tours, twilight shoots, and 2D/3D floor plans in Bahrain.",
+  alternates: { canonical: "/media" },
 };
 
 export default function MediaPage() {

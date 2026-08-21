@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: {
+    absolute: "Property Photography & Web Design Portfolio — Bahrain",
+  },
   description:
-    "Photography, virtual staging, floor plans, and custom websites built for businesses across Bahrain.",
+    "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain.",
+  alternates: { canonical: "/portfolio" },
 };
 
 export default function PortfolioPage({

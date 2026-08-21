@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import PackagesClient from "@/components/PackagesClient";
 
 export const metadata: Metadata = {
-  title: "Packages",
+  title: {
+    absolute: "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
+  },
   description:
     "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
+  alternates: { canonical: "/packages" },
 };
 
 export default function PackagesPage() {
