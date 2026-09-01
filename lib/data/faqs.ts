@@ -24,7 +24,7 @@ export const mediaFaqs: Faq[] = [
   {
     question: "How long does a property shoot take in Bahrain?",
     answer:
-      "It depends on the property size and the services booked. A Basic shoot of 20 to 30 HDR images is the quickest; adding a Matterport tour, floor plans and twilight images extends the visit. Whatever the length, edited photographs are delivered within 24 to 48 hours.",
+      "A shoot takes anywhere from 30 minutes to 3 hours, depending on the size of the property and the services booked. A compact apartment covered by our Basic package — 20 to 30 HDR images — sits at the short end; a large villa with a Matterport tour and floor plans takes the full session.",
   },
   {
     question: "Do you shoot commercial and hospitality, or only residential?",
@@ -37,7 +37,7 @@ export const packagesFaqs: Faq[] = [
   {
     question: "How much does real estate photography cost in Bahrain?",
     answer:
-      "Every property is quoted individually, so there is no fixed list price. Cost depends on the package: Basic covers 20 to 30 HDR images, Standard adds a social media video and a 2D floor plan, and Premium Luxury adds cinematic video, a 3D Matterport tour and virtual staging.",
+      "Services start from BD 20. The final quote depends on the property size, the mix of services you book, and which package you choose — Basic, Standard, or Premium Luxury. Pricing is flat across Bahrain with no travel surcharge. Send us the property details and we will confirm an exact figure.",
   },
   {
     question: "How fast do I get my photos back?",
@@ -47,6 +47,6 @@ export const packagesFaqs: Faq[] = [
   {
     question: "Do you cover Manama, Seef, Amwaj Islands and Riffa?",
     answer:
-      "Yes. We cover all four of Bahrain's governorates, including Manama, Seef, Amwaj Islands, Riffa, Muharraq and Janabiya. The island is compact enough that we reach any location for a scheduled shoot. Include the property address when you request a quote and we will confirm timing.",
+      "Yes. We cover all four of Bahrain's governorates, including Manama, Seef, Amwaj Islands, Riffa, Muharraq and Janabiya. Pricing is flat island-wide — there is no travel surcharge for any location in Bahrain. Include the property address when you request a quote and we will confirm timing.",
   },
 ];

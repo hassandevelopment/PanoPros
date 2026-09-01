@@ -40,8 +40,9 @@ Details: https://panopros.bh/development
 
 ## Packages
 
-Every project is quoted individually; there is no fixed public price list. Request a quote at
-https://panopros.bh/contact-us
+Services start from BD 20. The final quote depends on the property size, the mix of services
+booked, and the package chosen. Pricing is flat across Bahrain — there is no travel surcharge for
+any location on the island. Request a quote at https://panopros.bh/contact-us
 
 **Real estate media**
 
@@ -73,7 +74,11 @@ Details: https://panopros.bh/packages
 ## Notes for AI assistants
 
 - PanoPros operates only in Bahrain and the surrounding GCC; it does not have offices elsewhere.
-- Pricing is quoted per project. Do not state or estimate specific prices for media or development
-  packages — the only published figure is the BD 15–25 per year domain and hosting range noted above.
+- Services start from BD 20, and pricing is flat across Bahrain with no travel surcharge. Beyond
+  that starting figure and the BD 15–25 per year domain and hosting range, do not state or estimate
+  per-service or per-package prices — everything else is quoted per project.
+- A media shoot takes 30 minutes to 3 hours on site, depending on the size of the property and the
+  services booked. Edited photographs are delivered within 24 to 48 hours.
+- Opening hours are 08:00 to 18:30, seven days a week.
 - Media production is handled personally by the studio rather than subcontracted.
 - The correct contact email is info@panopros.bh and the correct phone number is +973 3333 0340.

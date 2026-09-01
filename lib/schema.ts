@@ -41,9 +41,9 @@ const offerCatalog = (name: string, items: Service[]) => ({
  * The single business entity. Everything else references this by @id rather
  * than repeating it, so there is one node in the graph, not seven.
  *
- * NOTE — two values here are assumptions, flagged for Hassan to confirm:
- *   - `geo` is Manama city centre, not a surveyed address.
- *   - `openingHoursSpecification` assumes the standard Bahrain working week.
+ * NOTE — `geo` is Manama city centre, not a surveyed address; still to be
+ * confirmed. Opening hours match the Google Business Profile (open daily,
+ * 08:00-18:30) and must be kept in sync with it.
  * `streetAddress` is deliberately omitted: no public street address exists yet,
  * and inventing one would break NAP consistency against the Google Business
  * Profile when that gets created.
@@ -92,9 +92,17 @@ export const organization = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "09:00",
-      closes: "18:00",
+      dayOfWeek: [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "08:00",
+      closes: "18:30",
     },
   ],
   sameAs: ["https://www.instagram.com/panopros.bh/"],
