@@ -1,5 +1,7 @@
 export interface Service {
   title: string;
+  /** Descriptive, keyword-bearing alt text. Falls back to `title` if absent. */
+  alt?: string;
   image: string;
   poster?: string;
   images?: string[];
@@ -14,6 +16,7 @@ export interface Service {
 export const devServices: Service[] = [
   {
     title: "Business Websites",
+    alt: "Custom business website designed and built in Bahrain",
     image: "/images/services/dev-landing.webp",
     objectPosition: "center",
     body: "Custom-built, mobile-first websites designed to convert visitors into customers.",
@@ -21,6 +24,7 @@ export const devServices: Service[] = [
   },
   {
     title: "Landing Pages",
+    alt: "Landing page design for a Bahraini business",
     image: "/images/services/dev-websites-1.webp",
     images: [
       "/images/services/dev-websites-1.webp",
@@ -33,6 +37,7 @@ export const devServices: Service[] = [
   },
   {
     title: "Mobile Applications",
+    alt: "Custom iOS and Android mobile app built in Bahrain",
     image: "/images/services/mobile-apps.webp",
     objectPosition: "center",
     objectFit: "contain",
@@ -41,12 +46,14 @@ export const devServices: Service[] = [
   },
   {
     title: "Payment Integrations",
+    alt: "Benefit Pay and card payment integration for a Bahrain website",
     image: "/images/services/payment-integrations.svg",
     objectPosition: "center",
     body: "Add credit, debit, and Benefit Pay to your website or app seamlessly.",
   },
   {
     title: "SEO & Performance",
+    alt: "SEO and website performance optimisation for a Bahrain business",
     image: "/images/services/seo-performance.svg",
     objectPosition: "center",
     body: "Fast load times and Google-ready structure baked in from the start.",
@@ -56,6 +63,7 @@ export const devServices: Service[] = [
 export const services: Service[] = [
   {
     title: "Photography",
+    alt: "Real estate photography of a property interior in Bahrain",
     image: "/images/services/photography.webp",
     objectPosition: "center",
     body: "Professional photos that make your listing stand out and attract serious buyers.",
@@ -63,6 +71,7 @@ export const services: Service[] = [
   },
   {
     title: "Matterport Virtual Tours",
+    alt: "Matterport 3D virtual tour walkthrough of a Bahrain property",
     image: "/images/services/virtual-tour.mp4",
     poster: "/images/services/virtual-tour-poster.webp",
     objectPosition: "center",
@@ -75,24 +84,28 @@ export const services: Service[] = [
   },
   {
     title: "Virtual Staging",
+    alt: "Virtual staging before and after of an empty room in Bahrain",
     image: "/images/services/virtual-staging.webp",
     objectPosition: "center",
     body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
   },
   {
     title: "Twilight Shoot",
+    alt: "Twilight real estate photography of a property exterior in Bahrain",
     image: "/images/services/twilight.webp",
     objectPosition: "center",
     body: "Evening light makes your property look its best and stops the scroll.",
   },
   {
     title: "3D Floor Plans",
+    alt: "3D floor plan showing a Bahrain property layout",
     image: "/images/services/3d-floor-plan.webp",
     objectPosition: "top",
     body: "Give buyers an immersive, three-dimensional view of your property layout.",
   },
   {
     title: "2D Floor Plans",
+    alt: "2D floor plan showing a Bahrain property layout",
     image: "/images/services/2d-floor-plan.webp",
     objectPosition: "top",
     body: "A clean, accurate floor plan so buyers instantly understand the space.",

@@ -23,7 +23,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   metadataBase: new URL("https://panopros.bh"),
   title: {
     default: "PanoPros — Media & Development in Bahrain",
@@ -68,6 +68,27 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
+
+/**
+ * /ar currently renders the English copy verbatim — next-intl is wired up but
+ * no component calls useTranslations yet. Serving identical text at a second
+ * URL is a duplicate-content liability, so the Arabic tree is kept out of the
+ * index until real translations land. All i18n plumbing stays in place.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...baseMetadata,
+    robots:
+      locale === "ar"
+        ? { index: false, follow: true }
+        : { index: true, follow: true },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

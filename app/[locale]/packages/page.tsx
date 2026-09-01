@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PackagesClient from "@/components/PackagesClient";
-import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
+import FaqSection from "@/components/FaqSection";
+import { packagesFaqs } from "@/lib/data/faqs";
+import { breadcrumb, faqPage, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +27,9 @@ export default function PackagesPage() {
     <section className="grain pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Packages", "/packages")))}
+        dangerouslySetInnerHTML={jsonLd(
+          graph(breadcrumb("Packages", "/packages"), faqPage(packagesFaqs))
+        )}
       />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -42,6 +46,8 @@ export default function PackagesPage() {
         </div>
 
         <PackagesClient />
+
+        <FaqSection faqs={packagesFaqs} heading="Pricing &amp; booking questions" />
       </div>
     </section>
   );

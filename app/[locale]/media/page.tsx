@@ -3,7 +3,9 @@ import Link from "next/link";
 import { services } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
-import { breadcrumb, graph, jsonLd, openGraph, serviceList, twitter } from "@/lib/schema";
+import FaqSection from "@/components/FaqSection";
+import { mediaFaqs } from "@/lib/data/faqs";
+import { breadcrumb, faqPage, graph, jsonLd, openGraph, serviceList, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +30,13 @@ export default function MediaPage() {
     <section className="grain bg-bone min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Media", "/media"), serviceList(services, "/media", "Real Estate Media")))}
+        dangerouslySetInnerHTML={jsonLd(
+          graph(
+            breadcrumb("Media", "/media"),
+            serviceList(services, "/media", "Real Estate Media"),
+            faqPage(mediaFaqs)
+          )
+        )}
       />
       {/* Typographic header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-16 md:pb-20 text-center">
@@ -52,6 +60,10 @@ export default function MediaPage() {
               <ServiceCard key={service.title} {...service} />
             ))}
           </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <FaqSection faqs={mediaFaqs} heading="Questions about our media services" />
         </ScrollReveal>
 
         <ScrollReveal className="flex flex-col items-center gap-4 mt-12 md:mt-16">

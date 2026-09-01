@@ -6,8 +6,9 @@ import { parseInlineBold, versioned } from "@/lib/utils";
 import type { Service } from "@/lib/data/services";
 import { blurData } from "@/lib/data/blur-data";
 
-export default function ServiceCard({ title, image, poster, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link, priority }: Service) {
+export default function ServiceCard({ title, alt, image, poster, images, objectPosition = "center", objectFit = "cover", imageBackground, body, link, priority }: Service) {
   const parts = parseInlineBold(body);
+  const imageAlt = alt ?? title;
   const isVideo = image.endsWith(".mp4");
   const isGif = image.endsWith(".gif");
   const hasSlideshow = images && images.length > 1;
@@ -74,7 +75,7 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
               <Image
                 key={src}
                 src={versioned(src)}
-                alt={`${title} - slide ${i + 1}`}
+                alt={imageAlt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
@@ -113,7 +114,7 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={versioned(poster)}
-                alt={title}
+                alt={imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ objectPosition }}
               />
@@ -135,7 +136,7 @@ export default function ServiceCard({ title, image, poster, images, objectPositi
         ) : (
           <Image
             src={versioned(currentSrc)}
-            alt={title}
+            alt={imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={objectFit === "contain" ? "object-contain" : "object-cover"}
