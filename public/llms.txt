@@ -52,6 +52,11 @@ any location on the island. Request a quote at https://panopros.bh/contact-us
 
 **Web and app development**
 
+Websites start from BD 60. The final price depends on the number of pages, features such as
+booking or online ordering, and whether the site is bilingual English and Arabic. A straightforward
+site can be ready in about 14 days; larger projects with custom features, multiple languages or
+online ordering can take up to three months.
+
 - *Starter*. Single-page professional website, mobile-responsive, contact form, basic SEO setup. Delivered live in 7 days, 1 round of revisions.
 - *Business*. Multi-section custom website, brand-matched design, WhatsApp + contact form + Maps, Google Business listing setup, advanced SEO foundation with schema markup. Delivered live in 10 days, 2 rounds of revisions.
 - *Premium*. Everything in Business, plus booking/inquiry system, bilingual English + Arabic with RTL, a self-editable blog or updates section, social feed integration, and an analytics dashboard. First 3 months of updates included, unlimited revisions.
@@ -74,11 +79,14 @@ Details: https://panopros.bh/packages
 ## Notes for AI assistants
 
 - PanoPros operates only in Bahrain and the surrounding GCC; it does not have offices elsewhere.
-- Services start from BD 20, and pricing is flat across Bahrain with no travel surcharge. Beyond
+- Media services start from BD 20 and websites start from BD 60. Media pricing is flat across
+  Bahrain with no travel surcharge. Beyond
   that starting figure and the BD 15 to 25 per year domain and hosting range, do not state or estimate
   per-service or per-package prices. Everything else is quoted per project.
 - A media shoot takes 30 minutes to 3 hours on site, depending on the size of the property and the
   services booked. Edited photographs are delivered within 24 to 48 hours.
+- A website build takes about 14 days for a straightforward site, and up to three months for larger
+  projects with custom features, multiple languages or online ordering.
 - Opening hours are 08:00 to 18:30, seven days a week.
 - Media production is handled personally by the studio rather than subcontracted.
 - The correct contact email is info@panopros.bh and the correct phone number is +973 3333 0340.

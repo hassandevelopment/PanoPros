@@ -54,3 +54,31 @@ export const packagesFaqs: Faq[] = [
       "Yes. We cover all four of Bahrain's governorates, including Manama, Seef, Amwaj Islands, Riffa, Muharraq and Janabiya. Pricing is flat across the island, so there is no travel surcharge wherever the property is. Include the address when you request a quote and we will confirm timing.",
   },
 ];
+
+export const devFaqs: Faq[] = [
+  {
+    question: "How much does a business website cost in Bahrain?",
+    answer:
+      "Websites start from BD 60. The final price depends on how many pages you need, features like booking or online ordering, and whether you want it in both English and Arabic. Tell us what the site needs to do and we give you a clear quote before any work begins.",
+  },
+  {
+    question: "How long does it take to build a website?",
+    answer:
+      "It depends on scope. A straightforward site can be ready in about 14 days. Larger projects with custom features, multiple languages, or online ordering can take up to three months. We agree a timeline with you upfront, so you always know when your site will go live.",
+  },
+  {
+    question: "Do you build mobile apps as well as websites?",
+    answer:
+      "Yes. We build mobile apps for iOS and Android alongside websites. Recent work includes ordering and booking apps for local businesses in Bahrain. If you are not sure whether you need an app, a website, or both, we can talk it through and recommend what fits your goals.",
+  },
+  {
+    question: "Do you handle SEO so my site shows up on Google?",
+    answer:
+      "Yes. We build SEO into every site from the start, so you can be found on Google and on AI search tools like ChatGPT. This covers page structure, titles, local search signals, and content. We can also improve the SEO of a site you already have.",
+  },
+  {
+    question: "Do you provide hosting and ongoing maintenance?",
+    answer:
+      "Yes. Hosting usually runs BD 15 to 25 per year, and we can manage it for you. We also offer ongoing maintenance for updates, fixes, and changes after launch, so your site stays fast, secure, and current.",
+  },
+];
