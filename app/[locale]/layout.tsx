@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { graph, jsonLd, organization } from "@/lib/schema";
 
 // latin only — the site has no latin-ext characters; dropping the subset
 // removes a preloaded font file from every page.
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
         alt: "PanoPros — Media & Development in Bahrain",
       },
     ],
-    locale: "en_US",
+    locale: "en_BH",
     type: "website",
   },
   twitter: {
@@ -66,46 +67,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "PanoPros",
-  image: "https://panopros.bh/og-image.jpg",
-  url: "https://panopros.bh",
-  telephone: "+97333330340",
-  email: "info@panopros.bh",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "BH",
-    addressRegion: "Bahrain",
-  },
-  areaServed: "Bahrain",
-  description:
-    "Real estate photography, video, virtual tours, floor plans, and custom web development for businesses in Bahrain.",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Media & Development Services",
-    itemListElement: [
-      "Photography",
-      "Cinematic Video",
-      "Social Media Video",
-      "Matterport Virtual Tours",
-      "Virtual Staging",
-      "2D Floor Plans",
-      "3D Floor Plans",
-      "Twilight Photography",
-      "Business Website Design",
-      "Landing Page Development",
-      "Bilingual Website (English + Arabic)",
-      "SEO & Performance Optimisation",
-      "Website Care Plan",
-    ].map((name) => ({
-      "@type": "Offer",
-      itemOffered: { "@type": "Service", name },
-    })),
-  },
 };
 
 export function generateStaticParams() {
@@ -139,9 +100,11 @@ export default async function LocaleLayout({
       className={`${playfair.variable} ${inter.variable}`}
     >
       <head>
+        {/* One organization node for the whole site; every page-level graph
+            references it by @id rather than repeating it. */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={jsonLd(graph(organization))}
         />
       </head>
       <body

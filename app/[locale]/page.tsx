@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { graph, jsonLd, openGraph, twitter, website } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
     absolute: "Photography, Virtual Tours & Web Development in Bahrain | PanoPros",
   },
   alternates: { canonical: "/" },
+  openGraph: openGraph(
+    "Photography, Virtual Tours & Web Development in Bahrain | PanoPros",
+    "A media and development studio in Bahrain, helping businesses stand out with photography, virtual tours, websites, and apps.",
+    "/"
+  ),
+  twitter: twitter(
+    "Photography, Virtual Tours & Web Development in Bahrain | PanoPros",
+    "A media and development studio in Bahrain, helping businesses stand out with photography, virtual tours, websites, and apps."
+  ),
 };
 
 export default function HomePage() {
@@ -15,6 +25,10 @@ export default function HomePage() {
       aria-label="Choose a craft: Media or Development"
       className="grain relative min-h-[100dvh] bg-bone text-ink flex flex-col items-center justify-center px-6 md:px-12 pt-24 md:pt-28"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(website))}
+      />
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center">
 
         {/* Intro: title and subtitle read as one block. Set well below the

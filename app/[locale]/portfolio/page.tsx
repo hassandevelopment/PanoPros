@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PortfolioGallery from "@/components/PortfolioGallery";
+import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +9,15 @@ export const metadata: Metadata = {
   description:
     "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain.",
   alternates: { canonical: "/portfolio" },
+  openGraph: openGraph(
+    "Property Photography & Web Design Portfolio — Bahrain",
+    "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain.",
+    "/portfolio"
+  ),
+  twitter: twitter(
+    "Property Photography & Web Design Portfolio — Bahrain",
+    "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain."
+  ),
 };
 
 export default function PortfolioPage({
@@ -19,6 +29,10 @@ export default function PortfolioPage({
 
   return (
     <section className="grain pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Portfolio", "/portfolio")))}
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />

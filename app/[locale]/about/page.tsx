@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
+import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -9,11 +10,24 @@ export const metadata: Metadata = {
   description:
     "Founded by Hassan Alnajjar, PanoPros delivers real estate photography and custom web development that helps Bahraini businesses win online.",
   alternates: { canonical: "/about" },
+  openGraph: openGraph(
+    "About PanoPros — Media & Development Studio in Manama",
+    "Founded by Hassan Alnajjar, PanoPros delivers real estate photography and custom web development that helps Bahraini businesses win online.",
+    "/about"
+  ),
+  twitter: twitter(
+    "About PanoPros — Media & Development Studio in Manama",
+    "Founded by Hassan Alnajjar, PanoPros delivers real estate photography and custom web development that helps Bahraini businesses win online."
+  ),
 };
 
 export default function AboutPage() {
   return (
     <section className="grain bg-bone min-h-screen flex flex-col items-center justify-center px-6 text-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("About", "/about")))}
+      />
       <div className="w-full max-w-2xl mx-auto py-32 md:py-40">
         <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
         <h1

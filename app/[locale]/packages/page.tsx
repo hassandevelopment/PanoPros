@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PackagesClient from "@/components/PackagesClient";
+import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -8,11 +9,24 @@ export const metadata: Metadata = {
   description:
     "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
   alternates: { canonical: "/packages" },
+  openGraph: openGraph(
+    "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
+    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
+    "/packages"
+  ),
+  twitter: twitter(
+    "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
+    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today."
+  ),
 };
 
 export default function PackagesPage() {
   return (
     <section className="grain pt-32 pb-20 md:pt-40 md:pb-28 bg-bone">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Packages", "/packages")))}
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />

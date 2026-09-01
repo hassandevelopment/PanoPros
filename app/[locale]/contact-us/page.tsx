@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -8,11 +9,24 @@ export const metadata: Metadata = {
   description:
     "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
   alternates: { canonical: "/contact-us" },
+  openGraph: openGraph(
+    "Contact PanoPros — Photography & Web Development in Bahrain",
+    "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
+    "/contact-us"
+  ),
+  twitter: twitter(
+    "Contact PanoPros — Photography & Web Development in Bahrain",
+    "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results."
+  ),
 };
 
 export default function ContactPage() {
   return (
     <section className="grain bg-bone min-h-screen px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Contact", "/contact-us")))}
+      />
       <div className="max-w-xl mx-auto pt-32 md:pt-40 pb-20 md:pb-28">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">

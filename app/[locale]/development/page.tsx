@@ -3,6 +3,7 @@ import Link from "next/link";
 import { devServices } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import { breadcrumb, graph, jsonLd, openGraph, serviceList, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -11,11 +12,24 @@ export const metadata: Metadata = {
   description:
     "Custom websites, landing pages, mobile apps, and brand identity for Bahraini businesses. Fast, modern, bilingual-ready.",
   alternates: { canonical: "/development" },
+  openGraph: openGraph(
+    "Web & Mobile App Development in Bahrain | PanoPros",
+    "Custom websites, landing pages, mobile apps, and brand identity for Bahraini businesses. Fast, modern, bilingual-ready.",
+    "/development"
+  ),
+  twitter: twitter(
+    "Web & Mobile App Development in Bahrain | PanoPros",
+    "Custom websites, landing pages, mobile apps, and brand identity for Bahraini businesses. Fast, modern, bilingual-ready."
+  ),
 };
 
 export default function DevelopmentPage() {
   return (
     <section className="grain bg-bone min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Development", "/development"), serviceList(devServices, "/development", "Web & App Development")))}
+      />
       {/* Typographic header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-16 md:pb-20 text-center">
         <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />

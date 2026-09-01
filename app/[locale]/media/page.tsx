@@ -3,6 +3,7 @@ import Link from "next/link";
 import { services } from "@/lib/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import { breadcrumb, graph, jsonLd, openGraph, serviceList, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
@@ -11,11 +12,24 @@ export const metadata: Metadata = {
   description:
     "Real estate photography, cinematic video, Matterport virtual tours, twilight shoots, and 2D/3D floor plans in Bahrain.",
   alternates: { canonical: "/media" },
+  openGraph: openGraph(
+    "Real Estate Photography & Videography in Bahrain | PanoPros",
+    "Real estate photography, cinematic video, Matterport virtual tours, twilight shoots, and 2D/3D floor plans in Bahrain.",
+    "/media"
+  ),
+  twitter: twitter(
+    "Real Estate Photography & Videography in Bahrain | PanoPros",
+    "Real estate photography, cinematic video, Matterport virtual tours, twilight shoots, and 2D/3D floor plans in Bahrain."
+  ),
 };
 
 export default function MediaPage() {
   return (
     <section className="grain bg-bone min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(graph(breadcrumb("Media", "/media"), serviceList(services, "/media", "Real Estate Media")))}
+      />
       {/* Typographic header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-16 md:pb-20 text-center">
         <div className="home-line w-full max-w-md h-px bg-ink/20 mb-10 mx-auto" />
