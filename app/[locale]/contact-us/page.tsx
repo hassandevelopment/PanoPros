@@ -4,18 +4,18 @@ import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact PanoPros — Photography & Web Development in Bahrain",
+    absolute: "Contact PanoPros, Photography & Web Development in Bahrain",
   },
   description:
     "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
   alternates: { canonical: "/contact-us" },
   openGraph: openGraph(
-    "Contact PanoPros — Photography & Web Development in Bahrain",
+    "Contact PanoPros, Photography & Web Development in Bahrain",
     "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results.",
     "/contact-us"
   ),
   twitter: twitter(
-    "Contact PanoPros — Photography & Web Development in Bahrain",
+    "Contact PanoPros, Photography & Web Development in Bahrain",
     "Get in touch with PanoPros for real estate photography or a custom website in Bahrain. Quick turnaround, professional results."
   ),
 };

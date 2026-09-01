@@ -50,7 +50,7 @@ export default function PackagesClient() {
 
   return (
     <>
-      {/* Toggle — same pill style as portfolio filter */}
+      {/* Toggle, same pill style as portfolio filter */}
       <div className="flex gap-2 justify-center mb-12">
         <TabBtn active={tab === "development"} onClick={() => setTab("development")}>
           Web &amp; App Development
@@ -136,7 +136,7 @@ export default function PackagesClient() {
             <ul className="space-y-2">
               {[
                 "All packages include domain & hosting setup guidance",
-                "Domain and hosting fees are separate (typically BD 15–25/year)",
+                "Domain and hosting fees are separate (typically BD 15 to 25 per year)",
                 "Custom features outside listed packages are quoted separately",
               ].map((note) => (
                 <li key={note} className="flex items-start gap-2 text-sm text-charcoal">
@@ -155,7 +155,7 @@ export default function PackagesClient() {
           <div className="mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-1">Real Estate Media</p>
             <h2 className="text-2xl font-bold text-ink">Photography, Video &amp; More</h2>
-            <p className="mt-2 text-charcoal text-sm">Every shoot is handled personally — no outsourcing, no shortcuts.</p>
+            <p className="mt-2 text-charcoal text-sm">Every shoot is handled personally. No outsourcing, no shortcuts.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">

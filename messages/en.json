@@ -44,7 +44,7 @@
     "mediaSection": {
       "eyebrow": "Real Estate Media",
       "heading": "Photography, Video & More",
-      "subtext": "Every shoot is handled personally — no outsourcing, no shortcuts.",
+      "subtext": "Every shoot is handled personally. No outsourcing, no shortcuts.",
       "helpText": "Not sure which package?",
       "helpLink": "Get in touch"
     },
@@ -81,7 +81,7 @@
     "heading": "Ready to Stand Out?",
     "subheading": "Tell us about your listing and we'll get back to you within one business day.",
     "submitButton": "Send Inquiry",
-    "successMessage": "Thanks — we'll be in touch within 1 business day."
+    "successMessage": "Thanks, we'll be in touch within 1 business day."
   },
   "footer": {
     "tagline": "Professional media.",

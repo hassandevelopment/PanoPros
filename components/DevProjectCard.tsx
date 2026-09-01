@@ -21,7 +21,7 @@ export default function DevProjectCard({ title, client, description, href, scree
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 16px rgba(0,0,0,0.12)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.08)"; }}
     >
-      {/* Header — screenshot if available, gradient fallback */}
+      {/* Header. Screenshot if available, gradient fallback */}
       {screenshot ? (
         <div className="relative aspect-[16/9] overflow-hidden" style={{ backgroundColor: '#e8e4de' }}>
           <Image

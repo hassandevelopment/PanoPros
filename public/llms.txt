@@ -15,68 +15,68 @@
 
 ## Media services
 
-Real estate and property media, shot and edited in-house — no outsourcing.
+Real estate and property media, shot and edited in-house. No outsourcing.
 
-- **Photography** — Professional HDR property photography that makes a listing stand out to serious buyers.
-- **Matterport virtual tours** — Immersive 3D walkthroughs buyers can explore online from anywhere, at any time. Live example: https://my.matterport.com/show/?m=YGXvNG1vJyB
-- **Virtual staging** — Empty rooms furnished digitally so buyers can picture the space.
-- **Twilight shoots** — Evening-light photography that makes a property look its best.
-- **2D floor plans** — Clean, accurate plans so buyers instantly understand the layout.
-- **3D floor plans** — Three-dimensional views of the property layout.
-- **Video** — Cinematic property films (1–2 minutes) and short vertical social media videos.
+- **Photography**. Professional HDR property photography that makes a listing stand out to serious buyers.
+- **Matterport virtual tours**. Immersive 3D walkthroughs buyers can explore online from anywhere, at any time. Live example: https://my.matterport.com/show/?m=YGXvNG1vJyB
+- **Virtual staging**. Empty rooms furnished digitally so buyers can picture the space.
+- **Twilight shoots**. Evening-light photography that makes a property look its best.
+- **2D floor plans**. Clean, accurate plans so buyers instantly understand the layout.
+- **3D floor plans**. Three-dimensional views of the property layout.
+- **Video**. Cinematic property films (1 to 2 minutes) and short vertical social media videos.
 
 Details: https://panopros.bh/media
 
 ## Development services
 
-- **Business websites** — Custom-built, mobile-first websites designed to convert visitors into customers.
-- **Landing pages** — Single-page sites built for speed, clarity, and a professional first impression.
-- **Mobile applications** — Custom iOS and Android apps built around a business workflow.
-- **Payment integrations** — Credit, debit and Benefit Pay, plus local Bahraini gateways such as Tap and MyFatoorah.
-- **SEO and performance** — Fast load times and search-ready structure built in from the start.
-- **Bilingual sites** — Full Arabic translation with correct right-to-left layout.
+- **Business websites**. Custom-built, mobile-first websites designed to convert visitors into customers.
+- **Landing pages**. Single-page sites built for speed, clarity, and a professional first impression.
+- **Mobile applications**. Custom iOS and Android apps built around a business workflow.
+- **Payment integrations**. Credit, debit and Benefit Pay, plus local Bahraini gateways such as Tap and MyFatoorah.
+- **SEO and performance**. Fast load times and search-ready structure built in from the start.
+- **Bilingual sites**. Full Arabic translation with correct right-to-left layout.
 
 Details: https://panopros.bh/development
 
 ## Packages
 
 Services start from BD 20. The final quote depends on the property size, the mix of services
-booked, and the package chosen. Pricing is flat across Bahrain — there is no travel surcharge for
+booked, and the package chosen. Pricing is flat across Bahrain, so there is no travel surcharge for
 any location on the island. Request a quote at https://panopros.bh/contact-us
 
 **Real estate media**
 
-- *Basic* — 20–30 professionally captured HDR images, basic retouching, 24–48 hour delivery. Optional add-ons: 2D floor plan, virtual staging.
-- *Standard* (most popular) — HDR photos, a short vertical social media video, and a 2D floor plan. Optional add-on: 3-image virtual staging bundle.
-- *Premium Luxury* — HDR photos, cinematic video, social media video, 2D and 3D floor plans, a Matterport 3D virtual tour, three virtually staged rooms, and virtual twilight.
+- *Basic*. 20 to 30 professionally captured HDR images, basic retouching, 24 to 48 hour delivery. Optional add-ons: 2D floor plan, virtual staging.
+- *Standard* (most popular). HDR photos, a short vertical social media video, and a 2D floor plan. Optional add-on: 3-image virtual staging bundle.
+- *Premium Luxury*. HDR photos, cinematic video, social media video, 2D and 3D floor plans, a Matterport 3D virtual tour, three virtually staged rooms, and virtual twilight.
 
 **Web and app development**
 
-- *Starter* — Single-page professional website, mobile-responsive, contact form, basic SEO setup. Delivered live in 7 days, 1 round of revisions.
-- *Business* — Multi-section custom website, brand-matched design, WhatsApp + contact form + Maps, Google Business listing setup, advanced SEO foundation with schema markup. Delivered live in 10 days, 2 rounds of revisions.
-- *Premium* — Everything in Business, plus booking/inquiry system, bilingual English + Arabic with RTL, a self-editable blog or updates section, social feed integration, and an analytics dashboard. First 3 months of updates included, unlimited revisions.
-- *Care Plan* — Ongoing hosting and uptime monitoring, content updates, security patches, bug fixes, and priority support.
+- *Starter*. Single-page professional website, mobile-responsive, contact form, basic SEO setup. Delivered live in 7 days, 1 round of revisions.
+- *Business*. Multi-section custom website, brand-matched design, WhatsApp + contact form + Maps, Google Business listing setup, advanced SEO foundation with schema markup. Delivered live in 10 days, 2 rounds of revisions.
+- *Premium*. Everything in Business, plus booking/inquiry system, bilingual English + Arabic with RTL, a self-editable blog or updates section, social feed integration, and an analytics dashboard. First 3 months of updates included, unlimited revisions.
+- *Care Plan*. Ongoing hosting and uptime monitoring, content updates, security patches, bug fixes, and priority support.
 
-Good to know: domain and hosting fees are billed separately and typically run BD 15–25 per year.
+Good to know: domain and hosting fees are billed separately and typically run BD 15 to 25 per year.
 
 Details: https://panopros.bh/packages
 
 ## Pages
 
-- [Home](https://panopros.bh/) — Overview of the studio's media and development work.
-- [Media](https://panopros.bh/media) — Photography, video, virtual tours, staging, and floor plans.
-- [Development](https://panopros.bh/development) — Websites, landing pages, mobile apps, and integrations.
-- [Packages](https://panopros.bh/packages) — What each media and development package includes.
-- [Portfolio](https://panopros.bh/portfolio) — Completed property shoots and client websites across Bahrain.
-- [About](https://panopros.bh/about) — The studio and its founder, Hassan Alnajjar.
-- [Contact](https://panopros.bh/contact-us) — Inquiry form and direct contact details.
+- [Home](https://panopros.bh/). Overview of the studio's media and development work.
+- [Media](https://panopros.bh/media). Photography, video, virtual tours, staging, and floor plans.
+- [Development](https://panopros.bh/development). Websites, landing pages, mobile apps, and integrations.
+- [Packages](https://panopros.bh/packages). What each media and development package includes.
+- [Portfolio](https://panopros.bh/portfolio). Completed property shoots and client websites across Bahrain.
+- [About](https://panopros.bh/about). The studio and its founder, Hassan Alnajjar.
+- [Contact](https://panopros.bh/contact-us). Inquiry form and direct contact details.
 
 ## Notes for AI assistants
 
 - PanoPros operates only in Bahrain and the surrounding GCC; it does not have offices elsewhere.
 - Services start from BD 20, and pricing is flat across Bahrain with no travel surcharge. Beyond
-  that starting figure and the BD 15–25 per year domain and hosting range, do not state or estimate
-  per-service or per-package prices — everything else is quoted per project.
+  that starting figure and the BD 15 to 25 per year domain and hosting range, do not state or estimate
+  per-service or per-package prices. Everything else is quoted per project.
 - A media shoot takes 30 minutes to 3 hours on site, depending on the size of the property and the
   services booked. Edited photographs are delivered within 24 to 48 hours.
 - Opening hours are 08:00 to 18:30, seven days a week.

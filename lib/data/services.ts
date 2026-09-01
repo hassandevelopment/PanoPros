@@ -87,7 +87,7 @@ export const services: Service[] = [
     alt: "Virtual staging before and after of an empty room in Bahrain",
     image: "/images/services/virtual-staging.webp",
     objectPosition: "center",
-    body: "Empty rooms don't sell — we furnish them digitally so buyers can picture the space.",
+    body: "Empty rooms don't sell. We furnish them digitally so buyers can picture the space.",
   },
   {
     title: "Twilight Shoot",

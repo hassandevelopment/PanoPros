@@ -54,7 +54,7 @@ export default function PackageCard({
         </div>
       )}
 
-      {/* Designed header — no photo */}
+      {/* Designed header, no photo */}
       <div
         className="relative px-6 pt-8 pb-7 flex flex-col justify-end min-h-[180px]"
         style={{ background: `${style.pattern}, ${style.bg}` }}

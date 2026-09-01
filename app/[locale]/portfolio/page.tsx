@@ -4,18 +4,18 @@ import { breadcrumb, graph, jsonLd, openGraph, twitter } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Property Photography & Web Design Portfolio — Bahrain",
+    absolute: "Property Photography & Web Design Portfolio in Bahrain",
   },
   description:
     "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain.",
   alternates: { canonical: "/portfolio" },
   openGraph: openGraph(
-    "Property Photography & Web Design Portfolio — Bahrain",
+    "Property Photography & Web Design Portfolio in Bahrain",
     "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain.",
     "/portfolio"
   ),
   twitter: twitter(
-    "Property Photography & Web Design Portfolio — Bahrain",
+    "Property Photography & Web Design Portfolio in Bahrain",
     "Real estate photography, virtual staging, 2D and 3D floor plans, and custom websites delivered for clients across Bahrain."
   ),
 };

@@ -30,7 +30,7 @@ export default function PortfolioGallery({ initialFilter }: { initialFilter?: st
 
   return (
     <>
-      {/* Filter pills — same style as PackagesClient toggle */}
+      {/* Filter pills, same style as PackagesClient toggle */}
       <div className="flex gap-2 justify-center mb-10">
         {portfolioCategories.map((cat) => (
           <button

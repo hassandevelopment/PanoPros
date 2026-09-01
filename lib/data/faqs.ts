@@ -1,7 +1,7 @@
 import type { Faq } from "@/lib/schema";
 
 /**
- * Answers are written to be quotable standalone — an AI answer engine lifts one
+ * Answers are written to be quotable standalone. An AI answer engine lifts one
  * paragraph without surrounding context, so each carries its own subject, a
  * concrete figure, and "Bahrain" where it reads naturally.
  *
@@ -10,8 +10,8 @@ import type { Faq } from "@/lib/schema";
  * quoted verbatim, so they should sound like a person answering a question.
  *
  * Every figure here traces to lib/data/packages.ts, to the published starting
- * price, or to public geography. Do not add numbers that are not verifiable —
- * they end up in FAQPage schema and get repeated as fact.
+ * price, or to public geography. Do not add numbers that are not verifiable.
+ * They end up in FAQPage schema and get repeated as fact.
  */
 
 export const mediaFaqs: Faq[] = [

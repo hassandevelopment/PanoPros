@@ -19,7 +19,7 @@ export default function MobileMenu({ open, onClose, links }: Props) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // Keep mounted for transition — only hide from tab order when closed
+  // Keep mounted for transition, only hide from tab order when closed
   return (
     <div
       className="fixed inset-0 z-[60] flex"

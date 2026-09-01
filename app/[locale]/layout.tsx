@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { graph, jsonLd, organization } from "@/lib/schema";
 
-// latin only — the site has no latin-ext characters; dropping the subset
+// latin only. The site has no latin-ext characters; dropping the subset
 // removes a preloaded font file from every page.
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ const inter = Inter({
 const baseMetadata: Metadata = {
   metadataBase: new URL("https://panopros.bh"),
   title: {
-    default: "PanoPros — Media & Development in Bahrain",
+    default: "PanoPros, Media & Development in Bahrain",
     template: "%s | PanoPros",
   },
   description:
@@ -36,7 +36,7 @@ const baseMetadata: Metadata = {
   creator: "PanoPros",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "PanoPros — Media & Development in Bahrain",
+    title: "PanoPros, Media & Development in Bahrain",
     description:
       "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert.",
     url: "https://panopros.bh",
@@ -47,7 +47,7 @@ const baseMetadata: Metadata = {
         secureUrl: "https://panopros.bh/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PanoPros — Media & Development in Bahrain",
+        alt: "PanoPros, Media & Development in Bahrain",
       },
     ],
     locale: "en_BH",
@@ -55,7 +55,7 @@ const baseMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PanoPros — Media & Development in Bahrain",
+    title: "PanoPros, Media & Development in Bahrain",
     description:
       "Photography, video, and visual content that gets noticed. Websites and mobile apps that convert.",
     images: ["https://panopros.bh/og-image.jpg"],
@@ -70,7 +70,7 @@ const baseMetadata: Metadata = {
 };
 
 /**
- * /ar currently renders the English copy verbatim — next-intl is wired up but
+ * /ar currently renders the English copy verbatim. next-intl is wired up but
  * no component calls useTranslations yet. Serving identical text at a second
  * URL is a duplicate-content liability, so the Arabic tree is kept out of the
  * index until real translations land. All i18n plumbing stays in place.

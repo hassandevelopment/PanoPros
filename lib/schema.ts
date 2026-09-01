@@ -10,7 +10,7 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
  *
  * `JSON.stringify` does not escape `<`, so a `</script>` sequence inside any
  * string value would close the tag early. Escaping `<` as its unicode form
- * closes that off — this is the approach the Next.js 16 JSON-LD guide
+ * closes that off. This is the approach the Next.js 16 JSON-LD guide
  * recommends (node_modules/next/dist/docs/01-app/02-guides/json-ld.md).
  */
 export function jsonLd(data: unknown) {
@@ -41,7 +41,7 @@ const offerCatalog = (name: string, items: Service[]) => ({
  * The single business entity. Everything else references this by @id rather
  * than repeating it, so there is one node in the graph, not seven.
  *
- * NOTE — `geo` is Manama city centre, not a surveyed address; still to be
+ * NOTE: `geo` is Manama city centre, not a surveyed address; still to be
  * confirmed. Opening hours match the Google Business Profile (open daily,
  * 08:00-18:30) and must be kept in sync with it.
  * `streetAddress` is deliberately omitted: no public street address exists yet,
@@ -170,14 +170,14 @@ const OG_IMAGE = {
   secureUrl: `${SITE_URL}/og-image.jpg`,
   width: 1200,
   height: 630,
-  alt: "PanoPros — Media & Development in Bahrain",
+  alt: "PanoPros, Media & Development in Bahrain",
 };
 
 /**
  * Per-route Open Graph / Twitter metadata.
  *
- * Next.js *replaces* a parent segment's `openGraph` when a child defines one —
- * it does not deep-merge — so siteName, images, locale and type are respecified
+ * Next.js *replaces* a parent segment's `openGraph` when a child defines one.
+ * It does not deep-merge, so siteName, images, locale and type are respecified
  * here rather than inherited from the root layout.
  */
 export function openGraph(

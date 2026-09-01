@@ -120,14 +120,14 @@ export const packages: Package[] = [
     features: [
       {
         title: "Professional HDR Photography",
-        body: "20–30 professionally captured High Dynamic Range images that highlight the best features of your property.",
+        body: "20 to 30 professionally captured High Dynamic Range images that highlight the best features of your property.",
       },
       {
         title: "Basic Retouching",
         body: "Each photo is professionally edited for lighting, colour balance, and clarity.",
       },
       {
-        title: "24–48 Hour Delivery",
+        title: "24 to 48 Hour Delivery",
         body: "Fast turnaround so your listing goes live without delay.",
       },
     ],
@@ -167,7 +167,7 @@ export const packages: Package[] = [
       },
       {
         title: "Cinematic Video",
-        body: "1–2 minutes of smooth, high-quality visuals. Shot with professional equipment to showcase every detail.",
+        body: "1 to 2 minutes of smooth, high-quality visuals. Shot with professional equipment to showcase every detail.",
       },
       {
         title: "Social Media Video",

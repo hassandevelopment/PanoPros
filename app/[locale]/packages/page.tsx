@@ -9,16 +9,16 @@ export const metadata: Metadata = {
     absolute: "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
   },
   description:
-    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
+    "Real estate media and web development packages in Bahrain. Photography, video, virtual tours, and custom websites. Request a quote today.",
   alternates: { canonical: "/packages" },
   openGraph: openGraph(
     "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
-    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today.",
+    "Real estate media and web development packages in Bahrain. Photography, video, virtual tours, and custom websites. Request a quote today.",
     "/packages"
   ),
   twitter: twitter(
     "Photography & Virtual Tour Pricing in Bahrain | PanoPros",
-    "Real estate media and web development packages in Bahrain — photography, video, virtual tours, and custom websites. Request a quote today."
+    "Real estate media and web development packages in Bahrain. Photography, video, virtual tours, and custom websites. Request a quote today."
   ),
 };
 

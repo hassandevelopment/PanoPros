@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 /**
  * Static per-route dates. Previously every entry used `new Date()`, so lastmod
- * changed on every build even when the page had not — search engines discount a
+ * changed on every build even when the page had not. Search engines discount a
  * lastmod that churns. Bump a date by hand when that route's content changes.
  */
 const UPDATED = {
